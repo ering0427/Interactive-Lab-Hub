@@ -56,7 +56,8 @@ _Goals:_ Martin's goal is to get a treat. My goal is to give him a treat when he
 **Include a picture of your storyboard here**
 
 **Summarize feedback you got here.**
-My classmates think that the device can be helpful in dog training.
+
+My classmates think that the device can be helpful for dog training.
 
 
 ## Part B. Act out the Interaction
