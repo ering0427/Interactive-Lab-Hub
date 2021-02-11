@@ -49,15 +49,14 @@ _Setting:_ The interaction is happening in my living room.
 
 _Players:_ My dog Martin and I will be involved in the interaction. My boyfriend will probably also be in the setting. 
 
-_Activity:_ When I say "sit", if Martin sits down and remains still for five seconds, the device will turn green to indicate I should give him a treat.
+_Activity:_ When I say "sit", if Martin sits down and remains still for five seconds, the device will turn green to indicate that I should give him a treat.
 
 _Goals:_ Martin's goal is to get a treat. My goal is to give him a treat when he sits down for five seconds.
 
-Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
 **Include a picture of your storyboard here**
 
-Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
 **Summarize feedback you got here.**
+My classmates think that the device can be helpful in dog training.
 
 
 ## Part B. Act out the Interaction
