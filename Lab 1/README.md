@@ -58,16 +58,18 @@ _Goals:_ Martin's goal is to get a treat. My goal is to give him a treat when he
 
 **Summarize feedback you got here.**
 
-My classmates think that the device can be helpful for dog training.
+My classmates think that the device can be helpful for training a dog.
 
 
 ## Part B. Act out the Interaction
 
-Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
-
 **Are there things that seemed better on paper than acted out?**
 
+Giving a treat while I am holding the device is not very convenient. If I put the device on the ground, the devie cannot always point to my dog because he loves to move around. I'm also going to change 5 seconds to 3 seconds because Martin doesn't like to sit for long.
+
 **Are there new ideas that occur to you or your collaborators that come up from the acting?**
+
+
 
 
 ## Part C. Prototype the device
