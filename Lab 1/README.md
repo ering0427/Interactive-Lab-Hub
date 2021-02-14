@@ -54,7 +54,7 @@ _Activity:_ When I say "sit", if Martin sits down and remains still for five sec
 _Goals:_ Martin's goal is to get a treat. My goal is to give him a treat when he sits down for five seconds.
 
 **Include a picture of your storyboard here**
-
+![plot](storyboard.jpg)
 
 **Summarize feedback you got here.**
 
