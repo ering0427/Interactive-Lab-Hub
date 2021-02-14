@@ -45,15 +45,16 @@ Labs are due on Mondays. Make sure this page is linked to on your main class hub
 
 **Describe your setting, players, activity and goals here.**
 
-_Setting:_ The interaction is happening in my living room.
+_Setting:_ The interaction is happening in my living room. The interaction happens when I uses the device to train my dog how to sit.
 
-_Players:_ My dog Martin and I will be involved in the interaction. My boyfriend will probably also be in the setting. 
+_Players:_ My dog Martin and I will be involved in the interaction. Other people may also be in the setting, but the device will only respond to one person and one dog at a time.
 
 _Activity:_ When I say "sit", if Martin sits down and remains still for five seconds, the device will turn green to indicate that I should give him a treat.
 
 _Goals:_ Martin's goal is to get a treat. My goal is to give him a treat when he sits down for five seconds.
 
 **Include a picture of your storyboard here**
+
 
 **Summarize feedback you got here.**
 
