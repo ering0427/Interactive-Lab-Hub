@@ -87,9 +87,9 @@ We invented this tool for this lab!
 
 https://youtu.be/qkzSsuCgXVg
 
-Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
-
 **Show the follow-up work here.**
+
+https://youtu.be/LlPKwBYzgYA
 
 ## Part E. Costume the device
 
@@ -99,15 +99,23 @@ Think about the setting of the device: is the environment a place where the devi
 
 **Include sketches of what your device might look like here.**
 
+![plot](prototype.jpg)
+
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
 
+![plot](device.HEIC)
+
+I use a paper box to cover my phone so that the device is lightweight and looks like a box. I cut off a square on the box to show the screen. 
 
 ## Part F. Record
 
 **Take a video of your prototyped interaction.**
 
+https://youtu.be/E7K-R0XNDok
+
 **Please indicate anyone you collaborated with on this Lab.**
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+
+I'd like to thank Andrew Tsai, Haoran Yin, and Tianyou Xiao for giving me feedback on the interaction plan.
 
 # Staging Interaction, Part 2 
 
