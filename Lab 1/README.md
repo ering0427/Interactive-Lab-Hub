@@ -65,11 +65,11 @@ My classmates think that the device can be helpful for training a dog. With some
 
 **Are there things that seemed better on paper than acted out?**
 
-Giving a treat while I am holding the device is not very convenient. If I put the device on the ground, the devie cannot always point to my dog because he loves to move around. I'm also going to change 5 seconds to 3 seconds because Martin doesn't like to sit for long.
+Giving a treat while I am holding the device is not very convenient, but if I put the device on the ground, the devie cannot always point to my dog because he loves to move around. Therefore, I still decided to hold the device while performing the actions. I'm also going to change 5 seconds to 3 seconds because Martin doesn't like to sit for long.
 
 **Are there new ideas that occur to you or your collaborators that come up from the acting?**
 
-We can add more functions to the device to make it an automatic feeder.
+We can add more functions to the device to make it an automatic feeder. I am still thinking about how to wizard the device to make it feed the dog.
 
 
 ## Part C. Prototype the device
@@ -85,27 +85,29 @@ We invented this tool for this lab!
 
 **Include your first attempts at recording the set-up video here.**
 
+Here's my first attempt at setting up the wizarding set-up.
+
 https://youtu.be/qkzSsuCgXVg
 
 **Show the follow-up work here.**
+
+I asked my roommate to remotely control the device while I'm acting.
 
 https://youtu.be/LlPKwBYzgYA
 
 ## Part E. Costume the device
 
-Only now should you start worrying about what the device should look like. Develop a costume so that you can use your phone as this device.
-
-Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
-
 **Include sketches of what your device might look like here.**
 
 ![plot](prototype.jpg)
 
-**What concerns or opportunitities are influencing the way you've designed the device to look?**
-
 ![plot](device.jpg)
 
-I use a paper box to cover my phone so that the device is lightweight and looks like a box. I cut off a square on the box to show the screen. 
+**What concerns or opportunitities are influencing the way you've designed the device to look?**
+
+When designing the look of the device, I want it to be lightweight because it needs to be handheld by the actor. Water might be a danger, so it would be good to have at least some sort of water resistant treatment on the costume.
+
+I used a paper box to cover my phone so that the device is lightweight. The paper box is plastic-coated and is not completely water resistant, but it should be able to withstand incidental contact with water. I cut off a square on the box to show the screen. 
 
 ## Part F. Record
 
@@ -115,7 +117,7 @@ https://youtu.be/E7K-R0XNDok
 
 **Please indicate anyone you collaborated with on this Lab.**
 
-I'd like to thank Andrew Tsai, Haoran Yin, and Tianyou Xiao for giving me feedback on the interaction plan.
+I'd like to thank Andrew Tsai, Haoran Yin, and Tianyou Xiao for providing me feedback on the interaction plan.
 
 # Staging Interaction, Part 2 
 
