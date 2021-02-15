@@ -58,7 +58,7 @@ _Goals:_ Martin's goal is to get a treat. My goal is to give him a treat when he
 
 **Summarize feedback you got here.**
 
-My classmates think that the device can be helpful for training a dog.
+My classmates think that the device can be helpful for training a dog. With some adjustment, the device can be designed as an automatic feeder.
 
 
 ## Part B. Act out the Interaction
@@ -69,7 +69,7 @@ Giving a treat while I am holding the device is not very convenient. If I put th
 
 **Are there new ideas that occur to you or your collaborators that come up from the acting?**
 
-
+We can add more functions to the device to make it an automatic feeder.
 
 
 ## Part C. Prototype the device
