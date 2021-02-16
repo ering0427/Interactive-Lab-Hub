@@ -130,7 +130,6 @@ You will be assigned three partners from another group. Go to their github pages
 
 **Summarize feedback from your partners here.**
 
-I like how you’re using the project to create a device for your pet - very innovative! However, I was under the impression that you would should the color to Martin and train it to react in a certain way! Random thought - Instead of color (vision reliance), if we expand it to voice or vibrations, it can be beneficial to the visually impaired to treat their pets when they’re following orders!
 
 ## Make it your own
 
