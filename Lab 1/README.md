@@ -130,6 +130,9 @@ You will be assigned three partners from another group. Go to their github pages
 
 **Summarize feedback from your partners here.**
 
+I like how you’re using the project to create a device for your pet - very innovative! However, I was under the impression that you would should the color to Martin and train it to react in a certain way! Random thought - Instead of color (vision reliance), if we expand it to voice or vibrations, it can be beneficial to the visually impaired to treat their pets when they’re following orders!
+
+I love how you use the light to interact with your dog (sooo cute). Your idea has great potential!  Based on my understanding, you are using the light and your voice to provide positive reinforcement, which can be integrated into the device to train Martin automatically. I think it'd be very creative to make a device that uses voice to give different commands, light as a timer, and pet food as rewards to train pets (as you suggested previously).
 
 ## Make it your own
 
