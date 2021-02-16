@@ -134,6 +134,8 @@ I like how you’re using the project to create a device for your pet - very inn
 
 I love how you use the light to interact with your dog (sooo cute). Your idea has great potential!  Based on my understanding, you are using the light and your voice to provide positive reinforcement, which can be integrated into the device to train Martin automatically. I think it'd be very creative to make a device that uses voice to give different commands, light as a timer, and pet food as rewards to train pets (as you suggested previously).
 
+I loved the idea and the interaction setting so much! It is really unique to see the device was designed to train pets and it is truly inspiring. At this point, the device is only used to train dogs how to sit. When moving forward, I do think it has a great potential for developing even more features such as understanding color/voice commands.
+
 ## Make it your own
 
 Do last week’s assignment again, but this time: 
