@@ -130,10 +130,13 @@ You will be assigned three partners from another group. Go to their github pages
 
 **Summarize feedback from your partners here.**
 
+I exchanged feedback with Snigdha Singhania, Caitlin Stanton, Zhonghao Zhan, Jingjun Wang, and Yanjun Zhou.
+
 1) Adding a count-down sound so that the user can have a bettering understanding of the time.
 2) Expanding it to voice or vibrations. It can be beneficial to the visually impaired to treat their pets when they’re following orders.
 3) Can be integrated into the device to train Martin automatically.
 4) It has a great potential for developing even more features such as understanding color/voice commands.
+5) It seems a bit inconvenient to hold while also holding the treat and could also prove to be an issue if you need to be more hands on with your dog. Integrating it into a two part device with a collar and a treat dispenser would be a good idea (although the dog might learn to take advantage). The collar would act as the device you were holding in your prototype and could use a motion sensor to see whether the dog correctly completed the command, a camera/mic to ensure you said that specific command, and a clock to keep track of the time you want the command to occur for. Then if the dog behaves correctly, the connected treat dispenser would release a treat. This would allow for you to have two hands free.
 
 ## Make it your own
 
@@ -141,6 +144,6 @@ Do last week’s assignment again, but this time:
 1) It doesn’t have to (just) use light, 
 2) You can use any modality (e.g., vibration, sound) to prototype the behaviors, 
 3) We will be grading with an emphasis on creativity. 
-4) It seems a bit inconvenient to hold while also holding the treat and could also prove to be an issue if you need to be more hands on with your dog. Integrating it into a two part device with a collar and a treat dispenser would be a good idea (although the dog might learn to take advantage). The collar would act as the device you were holding in your prototype and could use a motion sensor to see whether the dog correctly completed the command, a camera/mic to ensure you said that specific command, and a clock to keep track of the time you want the command to occur for. Then if the dog behaves correctly, the connected treat dispenser would release a treat. This would allow for you to have two hands free.
+
 
 **Document everything here.**
