@@ -53,13 +53,14 @@ _Activity:_ When I say "sit", if Martin sits down and remains still for five sec
 
 _Goals:_ Martin's goal is to get a treat. My goal is to give him a treat when he sits down for five seconds.
 
+I would like to design a device to help me train my dog simple commands such as "sit" and "come". Ideally this device should be activated with a voice input. It will also have a camera that needs to be pointed to a dog to recognize the dog's gesture.
+
 **Include a picture of your storyboard here**
 ![plot](storyboard.jpg)
 
 **Summarize feedback you got here.**
 
 My classmates think that the device can be helpful for training a dog. With some adjustment, the device can be designed as an automatic feeder.
-
 
 ## Part B. Act out the Interaction
 
@@ -69,17 +70,13 @@ Giving a treat while I am holding the device is not very convenient, but if I pu
 
 **Are there new ideas that occur to you or your collaborators that come up from the acting?**
 
-We can add more functions to the device to make it an automatic feeder. I am still thinking about how to wizard the device to make it feed the dog.
-
+One idea that occurs to me from the acting is to attach the device to Martin. In this case, no camera is needed to detect if Martin is in the sitting position. However, the device needs to be lightweight so that the dog can comfortably wear it. 
 
 ## Part C. Prototype the device
 
-You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smart phone to act as a “light” and use a remote control interface to remotely change the light on that device. 
-
-Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
-
-We invented this tool for this lab! 
 **Give us feedback on Tinkerbelle.**
+
+I cannot connect to the localhost using Python 3.8. After I updated to 3.9 it works.
 
 ## Part D. Wizard the device
 
@@ -121,12 +118,7 @@ I'd like to thank Andrew Tsai, Haoran Yin, and Tianyou Xiao for providing me fee
 
 # Staging Interaction, Part 2 
 
-This describes the second week's work for this lab activity.
-
-
 ## Prep (to be done before Lab on Wednesday)
-
-You will be assigned three partners from another group. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
 
 **Summarize feedback from your partners here.**
 
