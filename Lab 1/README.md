@@ -151,3 +151,13 @@ _Goals:_ Martin's goal is to follow the command to get a treat.
 The device is designed for dog training and it does not require the owner to be present in the scene. The user can remotely activate the device to play a prerecorded command. A built-in camera will recognizes Martin's gesture to determine if he follows the command.
 
 ![plot](storyboard2.jpg)
+
+When acting out the interaction, I found it difficult for Martin to get used to the device. Therefore, I decided to use a toy dog for the prototyped interaction.
+
+![plot](prototype2.jpg)
+![plot](device2.jpg)
+
+I use a box to 
+When designing the look of the device, I want it to be lightweight because it needs to be handheld by the actor. Water might be a danger, so it would be good to have at least some sort of water resistant treatment on the costume.
+
+I used a paper box to cover my phone so that the device is lightweight. The paper box is plastic-coated and is not completely water resistant, but it should be able to withstand incidental contact with water. I cut off a square on the box to show the screen. 
