@@ -139,3 +139,15 @@ Do last week’s assignment again, but this time:
 
 
 **Document everything here.**
+
+_Setting:_ The interaction is happening in my living room. The interaction happens when I uses the device to train my dog how to sit.
+
+_Players:_ My dog Martin. I will remotely enable the device but will not be presenting in the scene. 
+
+_Activity:_ When the device gives a command "sit", the device will count down three seconds as Martin sits down. It will stop counting down if Martin moves. If Martin successfully follows the command, the device will dispense a treat.
+
+_Goals:_ Martin's goal is to follow the command to get a treat.
+
+The device is designed for dog training and it does not require the owner to be present in the scene. The user can remotely activate the device to play a prerecorded command. A built-in camera will recognizes Martin's gesture to determine if he follows the command.
+
+![plot](storyboard2.jpg)
