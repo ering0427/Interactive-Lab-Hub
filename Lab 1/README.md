@@ -157,7 +157,7 @@ When acting out the interaction, I found it difficult for Martin to get used to 
 ![plot](prototype2.jpg)
 ![plot](device2.jpg)
 ![plot](device2_inside.jpg)
-I use a box to 
-When designing the look of the device, I want it to be lightweight because it needs to be handheld by the actor. Water might be a danger, so it would be good to have at least some sort of water resistant treatment on the costume.
 
-I used a paper box to cover my phone so that the device is lightweight. The paper box is plastic-coated and is not completely water resistant, but it should be able to withstand incidental contact with water. I cut off a square on the box to show the screen. 
+I drill a hole on the box to dispense the treat. A phone with prerecorded command is hidden behind the box.
+
+https://youtu.be/7ce4RckPG0c
