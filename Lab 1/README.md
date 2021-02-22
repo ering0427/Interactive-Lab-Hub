@@ -156,7 +156,7 @@ When acting out the interaction, I found it difficult for Martin to get used to 
 
 ![plot](prototype2.jpg)
 ![plot](device2.jpg)
-
+![plot](device2——inside.jpg)
 I use a box to 
 When designing the look of the device, I want it to be lightweight because it needs to be handheld by the actor. Water might be a danger, so it would be good to have at least some sort of water resistant treatment on the costume.
 
