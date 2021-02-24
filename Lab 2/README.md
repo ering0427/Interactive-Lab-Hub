@@ -18,11 +18,9 @@ If you are overseas, you should have already ordered your parts.
 
 If you are remote but in the US, the teaching team mailed parts last week.
 
-<<<<<<< HEAD
 If you are in New York, you can pick up your parts ... <--Ilan please describe.
-=======
+
 If you are in New York, you can pick up your parts. If you have not picked up your parts by class you should come to Tata 351.
->>>>>>> origin/master
 
 ### Set up your Lab 2
 
