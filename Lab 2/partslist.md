@@ -1,5 +1,6 @@
 # Parts list inventory
 
+<<<<<<< HEAD
 Raspberry Pi 4
 
 Power Supply
@@ -39,3 +40,5 @@ Oled screen
 Led stick
 
 Keypad
+=======
+>>>>>>> origin/master
