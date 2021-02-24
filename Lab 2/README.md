@@ -26,8 +26,6 @@ If you are in New York, you can pick up your parts. If you have not picked up yo
 
 1. [Pull changes from the Interactive Lab Hub](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2021Spring/readings/Submitting%20Labs.md#to-pull-lab-updates) so that you have your own copy of Lab 2 on your own lab hub. (This may have to be done again at the start of lab on Wednesday.)
 
-<<<<<<< HEAD
-=======
 In terminal cd into your Interactive-Lab-Hub folder and run 
 
 ```
