@@ -18,8 +18,6 @@ If you are overseas, you should have already ordered your parts.
 
 If you are remote but in the US, the teaching team mailed parts last week.
 
-If you are in New York, you can pick up your parts ... <--Ilan please describe.
-
 If you are in New York, you can pick up your parts. If you have not picked up your parts by class you should come to Tata 351.
 
 ### Set up your Lab 2
@@ -39,6 +37,7 @@ Interactive-Lab-Hub $ git push
 Your local and remote should now be up to date with the most recent files.
 
 2. Go to the [lab prep page](prep.md) to inventory your parts and set up your Pi.
+
 
 ## Overview
 For this assignment, you are going to 
@@ -64,14 +63,6 @@ Labs are due on Mondays. Make sure this page is linked to on your main class hub
 
 ## Part A. 
 ## Connect to your Pi
-<<<<<<< HEAD
-
-
-
-## Part B. 
-## Try out the Command Line Clock
-
-=======
 Just like you did in the lab prep, ssh on to your pi. Once there create a python environment.
 
 ```
@@ -101,36 +92,23 @@ Install the packages from the requirements.txt and run the example
 ```
 you can press `ctrl-c` to exit.
 If you're unfamiliar with the code in `cli_clock.py` have a look at [this refresher](https://hackernoon.com/intermediate-python-refresher-tutorial-project-ideas-and-tips-i28s320p). If you're still concerned please reach out to the teaching staff!
->>>>>>> origin/master
 
 
 ## Part C. 
 ## Set up your RGB Display
-<<<<<<< HEAD
-we will introduce you to the [Adafruit MiniPiTFT](https://www.adafruit.com/product/4393) and Python on the Pi.
-=======
 We will introduce you to the [Adafruit MiniPiTFT](https://www.adafruit.com/product/4393) and Python on the Pi.
->>>>>>> origin/master
 
 <img src="https://cdn-learn.adafruit.com/assets/assets/000/082/842/large1024/adafruit_products_4393_iso_ORIG_2019_10.jpg" height="200" />
 
 The Raspberry Pi 4 has a variety of interfacing options. When you plug the pi in the red power LED turns on. Any time the SD card is accessed the green LED flashes. It has standard USB ports and HDMI ports. Less familiar it has a set of 20x2 pin headers that allow you to connect a various peripherals.
 
-<<<<<<< HEAD
-<img src="https://www.raspberrypi.org/documentation/usage/gpio/images/GPIO-Pinout-Diagram-2.png" height="200" />
-=======
 <img src="https://maker.pro/storage/g9KLAxU/g9KLAxUiJb9e4Zp1xcxrMhbCDyc3QWPdSunYAoew.png" height="400" />
->>>>>>> origin/master
 
 To learn more about any individual pin and what it is for go to [pinout.xyz](https://pinout.xyz/pinout/3v3_power) and click on the pin. Some terms may be unfamiliar but we will go over the relevant ones as they come up.
 
 ### Hardware
 
-<<<<<<< HEAD
-From your kit take out the  v and the [Raspberry Pi 4](https://www.adafruit.com/product/4296 | width=200)
-=======
 From your kit take out the display and the [Raspberry Pi 4](https://www.adafruit.com/product/4296 | width=200)
->>>>>>> origin/master
 
 Line up the screen and press it on the headers. The hole in the screen should match up with the hole on the raspberry pi.
 
@@ -139,51 +117,18 @@ Line up the screen and press it on the headers. The hole in the screen should ma
 <img src="https://cdn-learn.adafruit.com/assets/assets/000/082/861/original/adafruit_products_image.png" height="200">
 </p>
 
-<<<<<<< HEAD
-### Software
-
-In terminal SSH on to the pi
-
-```
-ssh pi@ixe00.local
-```
-
-Clone the repo for this assignment and create a branch with your netId
-
-```
-pi@ixe00:~$ git clone path/to/repo
-pi@ixe00:~$ cd repo
-```
-
-Set up your python environment, install the packages from the requirements.txt., and 
-
-```
-pi@ixe00:~/repo $ mkvirtualenv circuitpython
-(circuitpython) pi@ixe00:~/displayLab $ pip install -r requirements.txt 
-```
-
-=======
->>>>>>> origin/master
 #### Testing your Screen
 
 The display uses a communication protocol called [SPI](https://www.circuitbasics.com/basics-of-the-spi-communication-protocol/) to speak with the raspberry pi. We won't go in depth in this course over how SPI works. The port on the bottom of the display connects to the SDA and SCL pins used for the I2C communication protocol which we will cover later. GPIO (General Purpose Input/Output) pins 23 and 24 are connected to the two buttons on the left. GPIO 22 controls the display backlight.
 
 We can test it by typing 
 ```
-<<<<<<< HEAD
-python screenTest.py
-=======
 python screen_test.py
->>>>>>> origin/master
 ```
 
 You can type the name of a color then press either of the buttons to see what happens on the display. take a look at the code with
 ```
-<<<<<<< HEAD
-cat screenTest.py
-=======
 cat screen_test.py
->>>>>>> origin/master
 ```
 
 #### Displaying Info
@@ -198,15 +143,6 @@ You can look in `image.py` for an example of how to display an image on the scre
 ## Part D. 
 ## Set up the Display Clock Demo
 
-<<<<<<< HEAD
-## Part E.
-## Modify the barebones clock to make it your own
-
-Ilan, can you call out places in the code where people might be changing things? Ideally code is also commented thus.
-
-**A copy of your code should be in your Lab 2 Github repo.**
-
-=======
 In `screen_clock.py`. Show the time by filling in the while loop. You can use the code in `cli_clock.py` and `stats.py` to figure this out.
 
 
@@ -229,7 +165,6 @@ git push
 
 After that git will ask you to login to your github account to upload.
 
->>>>>>> origin/master
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
 
