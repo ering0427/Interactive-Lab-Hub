@@ -38,9 +38,7 @@ Interactive-Lab-Hub $ git push
 
 Your local and remote should now be up to date with the most recent files.
 
->>>>>>> origin/master
 2. Go to the [lab prep page](prep.md) to inventory your parts and set up your Pi.
-
 
 ## Overview
 For this assignment, you are going to 
