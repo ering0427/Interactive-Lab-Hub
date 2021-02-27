@@ -48,14 +48,18 @@ buttonB.switch_to_input()
 height = disp.width  # we swap height/width to rotate it to landscape!
 width = disp.height
 image = Image.new("RGB", (width, height))
+image1 = Image.new("RGB", (width, height))
 rotation = 90
 
 # Get drawing object to draw on image.
 draw = ImageDraw.Draw(image)
+draw1 = ImageDraw.Draw(image1)
 
 # Draw a black filled box to clear the image.
 draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+draw1.rectangle((0,0,width,height),outline=0,fill=(0,0,0))
 disp.image(image, rotation)
+
 # Draw some shapes.
 # First define some constants to allow easy resizing of shapes.
 padding = -2
@@ -64,10 +68,7 @@ bottom = height - padding
 # Move left to right keeping track of the current x position for drawing shapes.
 x = 0
 
-image = Image.open("red.jpg")
-backlight = digitalio.DigitalInOut(board.D22)
-backlight.switch_to_output()
-backlight.value = True
+image1 = Image.open("red.jpg")
 
 # Scale image to smaller screen dimension
 image_ratio = image.width / image.height
@@ -78,7 +79,7 @@ if screen_ratio < image_ratio:
 else:
     scaled_width = width
     scaled_height = image.height * width // image.width
-image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
+image1 = image1.resize((scaled_width, scaled_height), Image.BICUBIC)
 
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the
 # same directory as the python script!
@@ -93,7 +94,7 @@ backlight.value = True
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
-
+    draw1.rectangle((0,0,width,height),outline=0,fill=0)
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py
     # Display image.
     
@@ -103,14 +104,13 @@ while True:
         backlight.value = True
     
     if buttonB.value and not buttonA.value: # just button A pressed
-       
         clocktime = time.strftime("%m/%d/%Y %H:%M:%S")
         draw.text((x,top), clocktime, font=font, fill="#FFFFFF")
-    	disp.image(image, rotation))
-	time.sleep(1)
+        disp.image(image, rotation)
+        time.sleep(1)
     if buttonA.value and not buttonB.value: # just button B pressed
         x1 = scaled_width // 2 - width // 2
-	y1 = scaled_height // 2 - height // 2
-	image = image.crop((x1,y1,x1+width, y1+height))
-	disp.image(image, rotation)
+        y1 = scaled_height // 2 - height // 2
+        image1 = image1.crop((x1,y1,x1+width, y1+height))
+        disp.image(image1, rotation)
 	
