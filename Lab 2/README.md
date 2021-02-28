@@ -178,3 +178,6 @@ https://youtu.be/7NEh2c-oiE0
 
 For Part 2, I'm planning to let the user switch between the 12 hour format and the 24 hour format. I'd also like to add a stopwatch feature.
 
+!(sketch1.jpg)
+!(sketch2.jpg)
+
