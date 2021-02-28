@@ -176,5 +176,5 @@ https://youtu.be/7NEh2c-oiE0
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
-
+For Part 2, I'm planning to let the user switch between the 12 hour format and the 24 hour format. I'd also like to add a stopwatch feature.
 
