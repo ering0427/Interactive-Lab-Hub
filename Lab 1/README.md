@@ -4,19 +4,6 @@
 
 In the original stage production of Peter Pan, Tinker Bell was represented by a darting light created by a small handheld mirror off-stage, reflecting a little circle of light from a powerful lamp. Tinkerbell communicates her presence through this light to the other characters. See more info [here](https://en.wikipedia.org/wiki/Tinker_Bell). 
 
-There is no actor that plays Tinkerbell--her existence in the play comes from the interactions that the other characters have with her.
-
-
-
-For lab this week, we draw on this and other inspirations from theatre to stage interactions with a device where the main mode of display/output for the interactive device you are designing is lighting. You will plot the interaction with a storyboard, and use your computer and a smartphone to experiment with what the interactions will look and feel like. _Make sure you read all the instructions and understand the whole of the laboratory activity before starting!_
-
-
-
-## Prep
-
-1. Set up [your Github "Lab Hub" repository](../../../) by [following these instructions](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2021Spring/readings/Submitting%20Labs.md).
-2. Set up the README.md for your Hub repository (for instance, so that it has your name and points to your own Lab 1) and [learn how](https://guides.github.com/features/mastering-markdown/) to post links to your submissions on your readme.md so we can find them easily.
-
 ### For lab, you will need:
 
 1. Paper
@@ -56,84 +43,92 @@ Labs are due on Mondays. Make sure this page is linked to on your main class hub
 
 ## Part A. Plan 
 
-To stage the interaction with your interactive device, think about:
-
-_Setting:_ Where is this interaction happening? (e.g., a jungle, the kitchen) When is it happening?
-
-_Players:_ Who is involved in the interaction? Who else is there? If you reflect on the design of current day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
-
-_Activity:_ What is happening between the actors?
-
-_Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge). 
-
-The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 **Describe your setting, players, activity and goals here.**
 
-Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
-**Include a picture of your storyboard here**
+_Setting:_ The interaction is happening in my living room. The interaction happens when I uses the device to train my dog how to sit.
 
-Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
+_Players:_ My dog Martin and I will be involved in the interaction. Other people may also be in the setting, but the device will only respond to one person and one dog at a time.
+
+_Activity:_ When I say "sit", if Martin sits down and remains still for five seconds, the device will turn green to indicate that I should give him a treat.
+
+_Goals:_ Martin's goal is to get a treat. My goal is to give him a treat when he sits down for five seconds.
+
+I would like to design a device to help me train my dog simple commands such as "sit" and "come". Ideally this device should be activated with a voice input. It will also have a camera that needs to be pointed to a dog to recognize the dog's gesture.
+
+**Include a picture of your storyboard here**
+![plot](storyboard.jpg)
+
 **Summarize feedback you got here.**
 
+My classmates think that the device can be helpful for training a dog. With some adjustment, the device can be designed as an automatic feeder.
 
 ## Part B. Act out the Interaction
 
-Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
-
 **Are there things that seemed better on paper than acted out?**
+
+Giving a treat while I am holding the device is not very convenient, but if I put the device on the ground, the devie cannot always point to my dog because he loves to move around. Therefore, I still decided to hold the device while performing the actions. I'm also going to change 5 seconds to 3 seconds because Martin doesn't like to sit for long.
 
 **Are there new ideas that occur to you or your collaborators that come up from the acting?**
 
+One idea that occurs to me from the acting is to attach the device to Martin. In this case, no camera is needed to detect if Martin is in the sitting position. However, the device needs to be lightweight so that the dog can comfortably wear it. 
 
 ## Part C. Prototype the device
 
-You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smart phone to act as a “light” and use a remote control interface to remotely change the light on that device. 
-
-Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
-
-We invented this tool for this lab! 
-
-If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
-
 **Give us feedback on Tinkerbelle.**
 
+I cannot connect to the localhost using Python 3.8. After I updated to 3.9 it works.
+
 ## Part D. Wizard the device
-Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 **Include your first attempts at recording the set-up video here.**
 
-Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
+Here's my first attempt at setting up the wizarding set-up.
+
+https://youtu.be/qkzSsuCgXVg
 
 **Show the follow-up work here.**
 
+I asked my roommate to remotely control the device while I'm acting.
+
+https://youtu.be/LlPKwBYzgYA
+
 ## Part E. Costume the device
-
-Only now should you start worrying about what the device should look like. Develop a costume so that you can use your phone as this device.
-
-Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
 
 **Include sketches of what your device might look like here.**
 
+![plot](prototype.jpg)
+
+![plot](device.jpg)
+
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
 
+When designing the look of the device, I want it to be lightweight because it needs to be handheld by the actor. Water might be a danger, so it would be good to have at least some sort of water resistant treatment on the costume.
+
+I used a paper box to cover my phone so that the device is lightweight. The paper box is plastic-coated and is not completely water resistant, but it should be able to withstand incidental contact with water. I cut off a square on the box to show the screen. 
 
 ## Part F. Record
 
 **Take a video of your prototyped interaction.**
 
+https://youtu.be/E7K-R0XNDok
+
 **Please indicate anyone you collaborated with on this Lab.**
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+
+I'd like to thank Andrew Tsai, Haoran Yin, and Tianyou Xiao for providing me feedback on the interaction plan.
 
 # Staging Interaction, Part 2 
 
-This describes the second week's work for this lab activity.
-
-
 ## Prep (to be done before Lab on Wednesday)
 
-You will be assigned three partners from another group. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
-
 **Summarize feedback from your partners here.**
+
+I exchanged feedback with Snigdha Singhania, Caitlin Stanton, Zhonghao Zhan, Jingjun Wang, and Yanjun Zhou.
+
+1) Adding a count-down sound so that the user can have a bettering understanding of the time (Yanjun).
+2) Expanding it to voice or vibrations. It can be beneficial to the visually impaired to treat their pets when they’re following orders (Snigdha).
+3) Can be integrated into the device to train Martin automatically (Jingjun).
+4) It has a great potential for developing even more features such as understanding color/voice commands (Zhonghao).
+5) It seems a bit inconvenient to hold while also holding the treat and could also prove to be an issue if you need to be more hands on with your dog. Integrating it into a two part device with a collar and a treat dispenser would be a good idea (Caitlin). 
 
 ## Make it your own
 
@@ -142,4 +137,27 @@ Do last week’s assignment again, but this time:
 2) You can use any modality (e.g., vibration, sound) to prototype the behaviors, 
 3) We will be grading with an emphasis on creativity. 
 
-**Document everything here. (Particularly we'd like to see the storyboard and video, although photos of the prototype are also great.)**
+
+**Document everything here.**
+
+_Setting:_ The interaction is happening in my living room. The interaction happens when I uses the device to train my dog how to sit.
+
+_Players:_ My dog Martin. I will remotely enable the device but will not be presenting in the scene. 
+
+_Activity:_ When the device gives a command "sit", the device will count down three seconds as Martin sits down. It will stop counting down if Martin moves. If Martin successfully follows the command, the device will dispense a treat.
+
+_Goals:_ Martin's goal is to follow the command to get a treat.
+
+The device is designed for dog training and it does not require the owner to be present in the scene. The user can remotely activate the device to play a prerecorded command. A built-in camera will recognizes Martin's gesture to determine if he follows the command.
+
+![plot](storyboard2.jpg)
+
+When acting out the interaction, I found it difficult for Martin to get used to the device. Therefore, I decided to use a toy dog for the prototyped interaction.
+
+![plot](prototype2.jpg)
+![plot](device2.jpg)
+![plot](device2_inside.jpg)
+
+I drill a hole on the box to dispense the treat. A phone with prerecorded command is hidden behind the box.
+
+https://youtu.be/7ce4RckPG0c
