@@ -109,8 +109,10 @@ while True:
         disp.image(image, rotation)
         time.sleep(1)
     if buttonA.value and not buttonB.value: # just button B pressed
+        draw.rectangle((0,0,width,height),outline=0,fill=0)
         x1 = scaled_width // 2 - width // 2
         y1 = scaled_height // 2 - height // 2
         image1 = image1.crop((x1,y1,x1+width, y1+height))
+        draw.rectangle((0,0,width,height),outline=0,fill=0)
         disp.image(image1, rotation)
 	
