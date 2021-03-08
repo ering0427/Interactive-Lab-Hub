@@ -193,4 +193,4 @@ I received feedback from Ritika Poddar, Vince Bartle, Min Tae Lee, and Jacob Rau
 
 The user can press button A (the top button) to display a clock and press button A again to switch between the 12 hour format and the 24 hour format. The user can  press button B (the buttom button) to start a timer. When button B is pressed again, the device will display the time lasts between two button presses and restart the timer.
 
-
+https://youtu.be/I5E4fHWW59Y
