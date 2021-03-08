@@ -187,14 +187,10 @@ For Part 2, I'm planning to let the user switch between the 12 hour format and t
 
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
 
+I received feedback from Ritika Poddar, Vince Bartle, Min Tae Lee, and Jacob Rauch.
+
 # Lab 2 Part 2
 
-Pull Interactive Lab Hub updates to your repo.
-
-Modify the code from last week's lab to make a new visual interface for your new clock. You may [extend the Pi](Extending%20the%20Pi.md) by adding sensors or buttons, but this is not required.
-
-As always, make sure you document contributions and ideas from others explicitly in your writeup.
-
-You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
+The user can press button A (the top button) to display a clock and press button A again to switch between the 12 hour format and the 24 hour format. The user can  press button B (the buttom button) to start a timer. When button B is pressed again, the device will display the time lasts between two button presses and restart the timer.
 
 
