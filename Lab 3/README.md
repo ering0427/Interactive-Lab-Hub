@@ -1,4 +1,4 @@
-# You're a wizard, [Student Name Here]
+# You're a wizard, [Erin Gong]
 
 <img src="https://pbs.twimg.com/media/Cen7qkHWIAAdKsB.jpg" height="400">
 
