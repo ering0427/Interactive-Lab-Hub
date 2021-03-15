@@ -18,10 +18,15 @@ Prior to lab Wednesday, taken inventory of the kit parts that you have, and note
 #### On your computer download
 - [Raspberry Pi Imager](https://www.raspberrypi.org/software/)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Our Copy of Raspbian at [this dropbox link](https://www.dropbox.com/sh/2jt06jka7lg5z70/AAB6XnRWWais0wP5bOZ93upSa?dl=0) should dropbox not work, use our ftp server here: ftp://farlab.infosci.cornell.edu/Ixe_20201014.img.xz .
 =======
 - Our Copy of Raspbian at [this dropbox link](https://www.dropbox.com/sh/2jt06jka7lg5z70/AAB6XnRWWais0wP5bOZ93upSa?dl=0), or use our ftp server here: ftp://farlab.infosci.cornell.edu/IXE_20210224.img.xz .
 >>>>>>> origin/master
+=======
+- Our Copy of Raspbian at [this dropbox link](https://www.dropbox.com/sh/2jt06jka7lg5z70/AAB6XnRWWais0wP5bOZ93upSa?dl=0), or use our ftp server here: ftp://farlab.infosci.cornell.edu/IXE_20210224.img.xz .
+
+>>>>>>> FAR-Lab-Spring2021
 Download and use the ``.xz`` file in the Raspberry Pi Imager.
 - If using windows: [Windows 10 SSH Client](https://docs.microsoft.com/en-us/windows/terminal/tutorials/ssh) or [PuTTY](https://www.putty.org/)
 
@@ -224,5 +229,6 @@ After that a login window should appear, use your normal logins (originally: Acc
 ![](images/VNC2.png)
 
 At that point the normal RPI desktop should appear and you can start and stop programs from here. 
+
 
 
