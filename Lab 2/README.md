@@ -18,11 +18,23 @@ If you are overseas, you should have already ordered your parts.
 
 If you are remote but in the US, the teaching team mailed parts last week.
 
-If you are in New York, you can pick up your parts ... <--Ilan please describe.
+If you are in New York, you can pick up your parts. If you have not picked up your parts by class you should come to Tata 351.
 
 ### Set up your Lab 2
 
 1. [Pull changes from the Interactive Lab Hub](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2021Spring/readings/Submitting%20Labs.md#to-pull-lab-updates) so that you have your own copy of Lab 2 on your own lab hub. (This may have to be done again at the start of lab on Wednesday.)
+
+In terminal cd into your Interactive-Lab-Hub folder and run 
+
+```
+Interactive-Lab-Hub $ git remote add upstream https://github.com/FAR-Lab/Interactive-Lab-Hub.git
+Interactive-Lab-Hub $ git pull upstream Spring2021
+Interactive-Lab-Hub $ git add .
+Interactive-Lab-Hub $ git commit -m'merge'
+Interactive-Lab-Hub $ git push
+```
+
+Your local and remote should now be up to date with the most recent files.
 
 2. Go to the [lab prep page](prep.md) to inventory your parts and set up your Pi.
 
@@ -57,11 +69,40 @@ Labs are due on Mondays. Make sure this page is linked to on your main class hub
 ## Part B. 
 ## Try out the Command Line Clock
 
+Just like you did in the lab prep, ssh on to your pi. Once there create a Python environment.
+
+```
+ssh pi@ixe00
+pi@ixe00:~ $ virtualenv circuitpython
+pi@ixe00:~ $ source circuitpython/bin/activate
+(circuitpython) pi@ixe00:~ $ 
+
+```
+
+## Part B. 
+### Try out the Command Line Clock
+Clone the repo for this assignment
+
+```
+(circuitpython) pi@ixe00:~$ git clone https://github.com/YOURGITID/Interactive-Lab-Hub.git
+(circuitpython) pi@ixe00:~$ cd Interactive-Lab-Hub/Lab\ 2/
+(circuitpython) pi@ixe00:~/Interactive-Lab-Hub $ 
+```
+
+Install the packages from the requirements.txt and run the example
+
+```
+(circuitpython) pi@ixe00:~/Interactive-Lab-Hub $ pip install -r requirements.txt
+(circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 2 $ python cli_clock.py 
+02/24/2021 11:20:49
+```
+you can press `ctrl-c` to exit.
+If you're unfamiliar with the Python code in `cli_clock.py` have a look at [this Python refresher](https://hackernoon.com/intermediate-python-refresher-tutorial-project-ideas-and-tips-i28s320p). If you're still concerned, please reach out to the teaching staff!
 
 
 ## Part C. 
 ## Set up your RGB Display
-we will introduce you to the [Adafruit MiniPiTFT](https://www.adafruit.com/product/4393) and Python on the Pi.
+We will introduce you to the [Adafruit MiniPiTFT](https://www.adafruit.com/product/4393) and Python on the Pi.
 
 <img src="https://cdn-learn.adafruit.com/assets/assets/000/082/842/large1024/adafruit_products_4393_iso_ORIG_2019_10.jpg" height="200" />
 
@@ -145,5 +186,20 @@ Ilan, can you call out places in the code where people might be changing things?
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
+## Prep for Part 2
+
+1. Pick up remaining parts for kit.
+
+2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
+
+# Lab 2 Part 2
+
+Pull Interactive Lab Hub updates to your repo.
+
+Modify the code from last week's lab to make a new visual interface for your new clock. You may [extend the Pi](Extending%20the%20Pi.md) by adding sensors or buttons, but this is not required.
+
+As always, make sure you document contributions and ideas from others explicitly in your writeup.
+
+You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
 
 
