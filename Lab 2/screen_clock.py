@@ -85,16 +85,20 @@ image1 = image1.resize((scaled_width, scaled_height), Image.BICUBIC)
 # same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
 font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
+font1 = ImageFont.truetype("/usr/share/fonts/truetype/piboto/Piboto-Bold.ttf", 22)
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
+state = 0
+state_timer = 0
+start = time.time()
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
-    draw1.rectangle((0,0,width,height),outline=0,fill=0)
+    #draw1.rectangle((0,0,width,height),outline=0,fill=0)
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py
     # Display image.
     
@@ -104,13 +108,47 @@ while True:
         backlight.value = True
     
     if buttonB.value and not buttonA.value: # just button A pressed
-        clocktime = time.strftime("%m/%d/%Y %H:%M:%S")
-        draw.text((x,top), clocktime, font=font, fill="#FFFFFF")
-        disp.image(image, rotation)
-        time.sleep(1)
+        if state==0:
+            clocktime = time.strftime("%A, %B %e, %Y")
+            draw.text((x,top), clocktime, font=font1, fill="#03cafc")
+            clocktime2 = time.strftime("%H:%M:%S")
+            y = top + font.getsize(clocktime)[1]
+            draw.text((x, y), clocktime2, font=font1, fill="#1303fc")
+            disp.image(image, rotation)
+            time.sleep(1)
+            state = 1
+        elif state==1:
+            clocktime = time.strftime("%A, %B %e, %Y")
+            draw.text((x,top), clocktime, font=font1, fill="#03cafc")
+            clocktime2 = time.strftime("%I:%M:%S")
+            y = top + font.getsize(clocktime)[1]
+            draw.text((x,y), clocktime2, font=font1, fill="#7703fc")
+            disp.image(image, rotation)
+            time.sleep(1)
+            state = 0
+
     if buttonA.value and not buttonB.value: # just button B pressed
+        #draw1.rectangle((0,0,width,height),outline=0,fill=0)
         x1 = scaled_width // 2 - width // 2
         y1 = scaled_height // 2 - height // 2
         image1 = image1.crop((x1,y1,x1+width, y1+height))
-        disp.image(image1, rotation)
+        clear = image1.copy()
+        draw1 = ImageDraw.Draw(clear)
+        if state_timer == 0:
+            txt = "Start!"
+            draw1.text((10,5),txt, font=font1,fill="#7703fc")
+            start = time.time()
+            disp.image(clear, rotation)
+            time.sleep(1)
+            state_timer = 1
+        elif state_timer == 1:
+            txt = "End!"
+            draw1.text((10,5),txt, font=font1,fill="#7703fc")
+            end = time.time()
+            y = 5+font1.getsize(txt)[1]
+            result = round(end-start,2)
+            draw1.text((10,y),str(result)+" s",font=font1,fill="#7703fc")
+            disp.image(clear, rotation)
+            time.sleep(1)
+            state_timer = 0
 	
