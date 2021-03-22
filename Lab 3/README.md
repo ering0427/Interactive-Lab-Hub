@@ -72,7 +72,7 @@ I'm planning to design a smart workout assistant that instructs the user to do e
 
 ## Share your idea sketches with Zoom Room mates and get feedback
 
-*what was the feedback? Who did it come from?*
+See Discussions.
 
 ## Prototype your system
 
