@@ -85,7 +85,7 @@ The system should:
 
 The system should work like a smart trainer that customizes a workout plan for the user. It will first introduce itself, and then ask users about their personal information. During training, the system should be able to detect the user's gesture and give verbal suggestion when necessary. 
 
-The WoZ system has the same setup as in the demo. The wizard can listen to the user by clicking on the Eavesdrop button. When the button Start is clicked, the system will play an introduction to the user. In order to make the conversation between the system and the user more natural, I decided to put a script on the controller so that the wizard can copy and paste the speech when needed (see screenshot below). The wizard can also improvise a speach based on the interaction with the user.
+The WoZ system has the same setup as in the demo. The wizard can listen to the user by clicking on the Eavesdrop button. When the button Start is clicked, the system will play an introduction to the user. In order to make the conversation between the system and the user more natural, I decided to put a script on the controller so that the wizard can copy and paste the speech when needed (see the screenshot below). The wizard can also improvise a speech based on the interaction with the user.
 
 The accelerometer is used to determine if the user has followed the instructions given by the system to hold the gesture still. The user should hold the accelerometer by hand.
 
