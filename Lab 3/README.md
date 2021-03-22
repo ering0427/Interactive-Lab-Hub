@@ -101,20 +101,20 @@ I'm only able to recruit one person to interact with my system. I let the user k
 Answer the following:
 
 ### What worked well about the system and what didn't?
-The speech part worked well while the 
+The speech part worked well while the gesture recognition part didn't. Since the wizard can input speech freely based on the interaction with the uesr, the conversation was very natrual. The gesture recognition part wasn't very successful because the longest Qwiic/Stemma cable cannot allow the user to stretch his arm while holding the accelerometer.
 
 ### What worked well about the controller and what didn't?
 
-*your answer here*
+The conversation was natural but since the wizard has to type in the text in respond to the user, the user sometimes has to wait for the system's response.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-*your answer here*
+When the conversation seems natural, the users tend to talk to the system in long sentences just like the way they talk to human beings. Therefore, a more robust nlp system instead of a simple keyword recognizer is needed for an autonomous version of the system.
 
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-*your answer here*
+I could use the system to record the completion rate for each workout gesture so that the user can review his workout performances over time. To measure more gestures, a gyroscrope would make sense to capture rotations.
 
 
 
