@@ -66,7 +66,9 @@ Create a system that runs on the Raspberry Pi that takes in one or more sensors 
 
 ## Prep for Part 2
 
-1. Sketch ideas for what you'll work on in lab on Wednesday.
+I'm planning to design a smart workout assistant that instructs the user to do exercises. The user would be able to speak to the system about their age, height, and weight and receive a customized training plan.
+
+![plot](lab3.jpg)
 
 ## Share your idea sketches with Zoom Room mates and get feedback
 
