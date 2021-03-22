@@ -91,14 +91,17 @@ The accelerometer is used to determine if the user has followed the instructions
 
 *Include videos or screencaptures of both the system and the controller.*
 
+![plot](controller_screenshot.png)
+
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
 
+I'm only able to recruit one person to interact with my system. I let the user know that this system is supposed to be a smart trainer and that the accelerometer is used to measure his gesture accuracy before the interaction. However, due to the length of the cables, I didn't let him perform a full gesture as one would usually do for workouts.
 
 Answer the following:
 
 ### What worked well about the system and what didn't?
-*your answer here*
+The speech part worked well while the 
 
 ### What worked well about the controller and what didn't?
 
