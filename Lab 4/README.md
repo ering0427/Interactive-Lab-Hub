@@ -134,6 +134,8 @@ I designed a digital clock that can be placed on a desk. The user can switch the
 
 ![plot](clock_sketch.jpg)
 
+Whe
+
 **b. Make a video of your paper display in action.**
 
 **c. Explain the rationale for the design.** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
