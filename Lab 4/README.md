@@ -144,9 +144,11 @@ When designing the paper display, I left the two sided of the box open to slide 
 
 **b. Make a video of your paper display in action.**
 
+https://youtu.be/XtZ-yXJhRSg
+
 **c. Explain the rationale for the design.** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
 
-The clock is designed to be placed on the desk so that the user can easily see and reach the clock while sitting in front of the desk.
+The clock is designed to be placed on the desk so that the user can easily see and reach the clock while sitting in front of the desk. The size of the device should be similar to the size of a tissue box (or smaller) so that it doesn't take much of the space on the desk. The current design doesn't have a clear display of the time due to the limited screen size.
 
 ### Part D
 ### Materiality
