@@ -130,7 +130,7 @@ Make a paper display for your project that communicates the state of the Pi and 
  
 **a. Document the design for your paper display.** (e.g. if you had to make it again from scratch, what information would you need?). Include interim iterations (or at least tell us about them).
 
-I designed a digital clock that can be placed on a desk. The user can switch the display between the 12-hour format and the 24-hour format by touching on the top face of the clock box.
+I designed a digital clock that can be placed on a desk. The user can switch the display between the 12-hour format and the 24-hour format by touching on the top face of the clock box. See Figure 1.
 
 **b. Make a video of your paper display in action.**
 
