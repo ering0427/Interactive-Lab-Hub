@@ -132,6 +132,8 @@ Make a paper display for your project that communicates the state of the Pi and 
 
 I designed a digital clock that can be placed on a desk. The user can switch the display between the 12-hour format and the 24-hour format by touching on the top face of the clock box. See Figure 1.
 
+![plot](clock_sketch.jpg)
+
 **b. Make a video of your paper display in action.**
 
 **c. Explain the rationale for the design.** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
