@@ -130,11 +130,17 @@ Make a paper display for your project that communicates the state of the Pi and 
  
 **a. Document the design for your paper display.** (e.g. if you had to make it again from scratch, what information would you need?). Include interim iterations (or at least tell us about them).
 
-I designed a digital clock that can be placed on a desk. The user can switch the display between the 12-hour format and the 24-hour format by touching on the top face of the clock box. See Figure 1.
+I designed a digital clock that can be placed on a desk. The user can switch the display between the 12-hour format and the 24-hour format by touching on the top face of the clock box. See the figure below.
 
 ![plot](clock_sketch.jpg)
 
-Whe
+When designing the paper display, I left the two sided of the box open to slide in/out the Pi and the sensor. I used the copper tape to connect the touch button (a piece of paper) with the capacitive sensor. See the figure below.
+
+![plot](clock_1.jpg)
+
+![plot](clock_2.jpg)
+
+![plot](clock_3.jpg)
 
 **b. Make a video of your paper display in action.**
 
