@@ -130,9 +130,25 @@ Make a paper display for your project that communicates the state of the Pi and 
  
 **a. Document the design for your paper display.** (e.g. if you had to make it again from scratch, what information would you need?). Include interim iterations (or at least tell us about them).
 
+I designed a digital clock that can be placed on a desk. The user can switch the display between the 12-hour format and the 24-hour format by touching on the top face of the clock box. See the figure below.
+
+![plot](clock_sketch.jpg)
+
+When designing the paper display, I left the two sided of the box open to slide in/out the Pi and the sensor. I used the copper tape to connect the touch button (a piece of paper) with the capacitive sensor. See the figure below.
+
+![plot](clock_1.jpg)
+
+![plot](clock_2.jpg)
+
+![plot](clock_3.jpg)
+
 **b. Make a video of your paper display in action.**
 
+https://youtu.be/XtZ-yXJhRSg
+
 **c. Explain the rationale for the design.** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+
+The clock is designed to be placed on the desk so that the user can easily see and reach the clock while sitting in front of the desk. The size of the device should be similar to the size of a tissue box (or smaller) so that it doesn't take much of the space on the desk. The current design doesn't have a clear display of the time due to the limited screen size.
 
 ### Part D
 ### Materiality
@@ -143,11 +159,19 @@ Design a system with the Pi and anything from your kit with a focus on form, and
 
 **a. document the material prototype.** Include candidates that were considered even if they were set aside later.
 
+When designing the touch button for switching the clock mode, I first used the alligator clips to connect between the button (no actual buttons, just a flat surface) and the capacitive sensor. The alligator clips detect capacitive touch better than the copper tape. However, I finally chose the copper tape because it can be hidden behind the paper and the users won't be aware when they touch the button.
+
 **b. explain the selection.**
+
+As discussed above, I chose the copper tape instead of alligator clips because it is less visible.
 
 ### Part 2.
 
 Following exploration and reflection from Part 1, complete the "looks like," "works like" and "acts like" prototypes for your design.
+
+I decided to replace the capacitive sensor in Part 1 with a Qwiic button because the copper tape is less sensive under paper and a physical button provides more haptic feedback for the user. See the figure below.
+
+![plot](clock_sketch_2.jpg)
 
 Reiterating:
 ### Deliverables for this lab are: 
