@@ -181,5 +181,9 @@ I decided to replace the capacitive sensor in Part 1 with a Qwiic button because
 
 ![plot](clock_sketch_2.jpg)
 
+The paper display:
 
+![plot](clock_button_1.jpg)
+
+![plot](clock_button_2.jpg)
 
