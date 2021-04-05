@@ -169,10 +169,6 @@ As discussed above, I chose the copper tape instead of alligator clips because i
 
 Following exploration and reflection from Part 1, complete the "looks like," "works like" and "acts like" prototypes for your design.
 
-I decided to replace the capacitive sensor in Part 1 with a Qwiic button because the copper tape is less sensive under paper and a physical button provides more haptic feedback for the user. See the figure below.
-
-![plot](clock_sketch_2.jpg)
-
 Reiterating:
 ### Deliverables for this lab are: 
 1. Sketches/photos of device designs
@@ -180,5 +176,10 @@ Reiterating:
 3. "Works like" prototypes: show us what the device can do
 4. "Acts like" prototypes: videos/storyboards/other means of showing how a person would interact with the device
 5. Submit these in the lab 4 folder of your class [Github page], either as links or uploaded files. Each group member should post their own copy of the work to their own Lab Hub, even if some of the work is the same for each person in the group.
+
+I decided to replace the capacitive sensor in Part 1 with a Qwiic button because the copper tape is less sensive under paper and a physical button provides more haptic feedback for the user. See the figure below.
+
+![plot](clock_sketch_2.jpg)
+
 
 
