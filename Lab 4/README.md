@@ -142,6 +142,8 @@ When designing the paper display, I left the two sided of the box open to slide 
 
 ![plot](clock_3.jpg)
 
+The code is in timer.py
+
 **b. Make a video of your paper display in action.**
 
 https://youtu.be/XtZ-yXJhRSg
@@ -177,7 +179,7 @@ Reiterating:
 4. "Acts like" prototypes: videos/storyboards/other means of showing how a person would interact with the device
 5. Submit these in the lab 4 folder of your class [Github page], either as links or uploaded files. Each group member should post their own copy of the work to their own Lab Hub, even if some of the work is the same for each person in the group.
 
-I decided to replace the capacitive sensor in Part 1 with a Qwiic button because the copper tape is less sensive under paper and a physical button provides more haptic feedback for the user. See the figure below.
+I decided to replace the capacitive sensor in Part 1 with a Qwiic button because the copper tape is less sensive under paper and a physical button provides more tactile feedback for the user. See the figure below.
 
 ![plot](clock_sketch_2.jpg)
 
@@ -186,4 +188,8 @@ The paper display:
 ![plot](clock_button_1.jpg)
 
 ![plot](clock_button_2.jpg)
+
+A video of my paper display in action: https://youtu.be/I2nTwufKSBo
+
+The code is in timer_button.py
 
