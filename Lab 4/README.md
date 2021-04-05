@@ -159,6 +159,8 @@ Design a system with the Pi and anything from your kit with a focus on form, and
 
 **a. document the material prototype.** Include candidates that were considered even if they were set aside later.
 
+When designing the touch button for switching the clock mode, I first used the alligator clips to connect between the button (no actual buttons, just a flat surface) and the capacitive sensor. The alligator clips detect capacitive touch better than the copper tape. However, the copper tape can be hidden behind the paper and the users won't be aware when touching the button.
+
 **b. explain the selection.**
 
 ### Part 2.
