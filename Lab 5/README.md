@@ -90,6 +90,8 @@ Using the set up from the [Lab 3 demo](https://github.com/FAR-Lab/Interactive-La
 
 **1. Set up threshold detection** Can you identify when a signal goes above certain fixed values?
 
+The threshold is set to 2 for all axes.
+
 **2. Set up averaging** Can you average your signal in N-sample blocks? N-sample running average?
 
 **3. Set up peak detection** Can you identify when your signal reaches a peak and then goes down?
