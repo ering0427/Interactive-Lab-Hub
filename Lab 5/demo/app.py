@@ -53,6 +53,9 @@ def handle_message(val):
         x_total += x
         y_total += y
         z_total += z
+        if len(acc)>=2:
+            if acc[-2]<acc[-1]:
+                print("\nSignal goes down!\n")
         if len(acc)==10:
             x_avg = x_total / 10
             y_avg = y_total / 10
