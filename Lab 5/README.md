@@ -94,6 +94,8 @@ The threshold is set to 2 for all axes.
 
 **2. Set up averaging** Can you average your signal in N-sample blocks? N-sample running average?
 
+The signal is averaged in 10-sample blocks.
+
 **3. Set up peak detection** Can you identify when your signal reaches a peak and then goes down?
 
 Include links to your code here, and put the code for these in your repo--they will come in handy later.
