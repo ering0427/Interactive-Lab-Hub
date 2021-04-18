@@ -100,6 +100,8 @@ The signal is averaged in 10-sample blocks.
 
 Include links to your code here, and put the code for these in your repo--they will come in handy later.
 
+[Code here](Lab%205/demo)
+
 #### Teachable Machines (beta, optional)
 Google's [TeachableMachines](https://teachablemachine.withgoogle.com/train) might look very simple.  However, its simplicity is very useful for experimenting with the capabilities of this technology.
 
