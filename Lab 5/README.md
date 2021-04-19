@@ -88,17 +88,15 @@ Additional filtering and analysis can be done on the sensors that were provided 
 
 Using the set up from the [Lab 3 demo](https://github.com/FAR-Lab/Interactive-Lab-Hub/tree/Spring2021/Lab%203/demo) and the accelerometer, try the following:
 
-**1. Set up threshold detection** Can you identify when a signal goes above certain fixed values?
+**1. Set up threshold detection** 
 
 The threshold is set to 2 for all axes.
 
-**2. Set up averaging** Can you average your signal in N-sample blocks? N-sample running average?
+**2. Set up averaging** 
 
 The signal is averaged in 10-sample blocks.
 
-**3. Set up peak detection** Can you identify when your signal reaches a peak and then goes down?
-
-Include links to your code here, and put the code for these in your repo--they will come in handy later.
+**3. Set up peak detection** 
 
 [Code here](https://github.com/ering0427/Interactive-Lab-Hub/tree/Spring2021/Lab%205/demo)
 
@@ -122,9 +120,6 @@ As a note, the global Python install contains also a PyTorch installation. That 
 ### Part B
 ### Construct a simple interaction.
 
-Pick one of the models you have tried, pick a class of objects, and experiment with prototyping an interaction.
-This can be as simple as the boat detector earlier.
-Try out different interactions outputs and inputs.
 **Describe and detail the interaction, as well as your experimentation.**
 
 I used the object detection model to detect my dog Martin and my cat Bella. The model is able to detect 90 classes of objects and when it detects a dog, it draws a purple rectangle around the dog and prints the text "dog". When it detects a cat, it draws a green rectangle around the cat and prints the text "cat". The model does not print on the screen for other objects detected.
@@ -138,50 +133,33 @@ Here are two screenshots of the successful examples:
 ### Part C
 ### Test the interaction prototype
 
-Now flight test your interactive prototype and **note your observations**:
-For example:
-1. When does it what it is supposed to do?
-1. When does it fail?
-1. When it fails, why does it fail?
-1. Based on the behavior you have seen, what other scenarios could cause problems?
+**note your observations**:
 
-The system works well when there's ambient light and the animal's whole body is in the scene. It fails when the environment is dark and when the animal is partially in the scene. See examples below.
+The system works well when there's ambient light and the animal's whole body is in the scene. It fails when the environment is dark and when the animal is partially in the scene. The system can detect my cat pretty well but fails several times for my dog. See examples below.
 
 Martin is detected as a cat when he is partially in the scene:
 ![plot](dog_detected_as_cat.png)
 
-Martin is detected as both a dog and a cat when he is partially in the scene and is not facing the camera:
+Martin is detected both as a dog and as a cat when he is partially in the scene and is not facing the camera:
 ![plot](failed_example.png)
 
-The system may also fail when the animal is partially occluded by objects (e.g. a bowl).
+The system may also fail when the animal is partially occluded by objects (e.g. a bowl). 
 
 **Think about someone using the system. Describe how you think this will work.**
-1. Are they aware of the uncertainties in the system?
-1. How bad would they be impacted by a miss classification?
-1. How could change your interactive system to address this?
-1. Are there optimizations you can try to do on your sense-making algorithm.
 
 It will be very bad if my cat is accidentally detected as a dog (although not very likely) and the system beeps her away. In the case where my dog is detected as a cat, he will eat all of my cat's food. To make my system better detect and classify my dog and my cat, I will put the camera near a good light source and adjust the detection confidence level.
 
 ### Part D
 ### Characterize your own Observant system
 
-Now that you have experimented with one or more of these sense-making systems **characterize their behavior**.
-During the lecture, we mentioned questions to help characterize a material:
-* What can you use X for?
-* What is a good environment for X?
-* What is a bad environment for X?
-* When will X break?
-* When it breaks how will X break?
-* What are other properties/behaviors of X?
-* How does X feel?
+**characterize their behavior**.
 
 **Include a short video demonstrating the answers to these questions.**
 
 * The system can be used to prevent my dog from eating my cat's food (after adding other modalities). It can also be used to prevent my pets from getting close to dangerous objects such as stove tops and electrical outlets.
-* A good environment for the system should have ambient light. The placement of the camera can largely affect the detection result.n The camera should be placed slightly higher than the pet.
+* A good environment for the system should have ambient light. The placement of the camera can largely affect the detection result. So the camera should be placed slightly higher than the pet but not too high so that it can detect the whole body of the animal.
 * The system is good for detecting cats. 
-* It doesn't work as well for dogs that of similar sizes as cats. Plush toys can also be misclassified as animals.
+* It doesn't work as well for dogs that of similar sizes as cats. Plush toys can also be misclassified as animals and they should be avoided in the scene.
 ![plot](plush_toys.png)
 
 The setup is here:
@@ -196,11 +174,9 @@ https://youtu.be/erWvOf7L32U
 
 ## Part 2.
 
-Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
-
 **Include a short video demonstrating the finished result.**
 
-In Part 2, I added sound to the system. The Pi is connected to a bluetooth speaker placed near the bowl. It makes a sound when the camera detects a dog. I didn't make the sound loud enough to scare Martin away :)
+In Part 2, I added sound to the system. The Pi is connected to a bluetooth speaker placed near the bowl. It makes a sound when the camera detects a dog. I didn't make the sound loud enough so that Martin won't be scared away :)
 
 ![plot](Lab5_part2.jpg)
 
