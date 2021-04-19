@@ -200,4 +200,9 @@ Following exploration and reflection from Part 1, finish building your interacti
 
 **Include a short video demonstrating the finished result.**
 
-In Part 2, I added sound to the system. The system makes a sound when it detects a dog.
+In Part 2, I added sound to the system. The Pi is connected to a bluetooth speaker placed near the bowl. It makes a sound when the camera detects a dog. I didn't make the sound loud enough to scare Martin away :)
+
+![plot](Lab5_part2.jpg)
+
+The video is here:
+https://youtu.be/vhFsw3b8faE
