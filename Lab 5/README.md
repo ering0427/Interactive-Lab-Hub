@@ -153,11 +153,15 @@ Martin is detected as a cat when he is partially in the scene:
 Martin is detected as both a dog and a cat when he is partially in the scene and is not facing the camera:
 ![plot](failed_example.png)
 
+The system may also fail when the animal is partially occluded by objects (e.g. a bowl).
+
 **Think about someone using the system. Describe how you think this will work.**
 1. Are they aware of the uncertainties in the system?
 1. How bad would they be impacted by a miss classification?
 1. How could change your interactive system to address this?
 1. Are there optimizations you can try to do on your sense-making algorithm.
+
+It will be very bad if my cat is accidentally detected as a dog (although not very likely) and the system beeps her away. In the case where my dog is detected as a cat, he will eat all of my cat's food. To make my system better detect and classify my dog and my cat, I will put the camera near a good light source.
 
 ### Part D
 ### Characterize your own Observant system
@@ -173,3 +177,6 @@ During the lecture, we mentioned questions to help characterize a material:
 * How does X feel?
 
 **Include a short video demonstrating the answers to these questions.**
+
+* The system can be used to prevent my dog from eating my cat's food (after adding other modalities). It can also be used to prevent my pets from getting close to dangerous objects such as stove tops and electrical outlets.
+* A good environment for the system should have ambient light.
