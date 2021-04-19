@@ -182,7 +182,6 @@ During the lecture, we mentioned questions to help characterize a material:
 * A good environment for the system should have ambient light. The camera should be placed slightly higher than the pet.
 * The system is good for detecting cats. 
 * It doesn't work as well for dogs that of similar sizes as cats. Plush toys can also be misclassified as animals.
+![plot](plush_toys.png)
 
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-To the TA who might be reading this: I accidentally broke my SD card. I'll finish the rest as soon as my new SD card arrives!
