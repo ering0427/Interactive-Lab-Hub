@@ -182,3 +182,5 @@ In Part 2, I added sound to the system. The Pi is connected to a bluetooth speak
 
 The video is here:
 https://youtu.be/vhFsw3b8faE
+
+The video is slightly slower than the audio.
