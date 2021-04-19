@@ -184,6 +184,9 @@ During the lecture, we mentioned questions to help characterize a material:
 * It doesn't work as well for dogs that of similar sizes as cats. Plush toys can also be misclassified as animals.
 ![plot](plush_toys.png)
 
+Here's a video showing cat detection:
+https://youtu.be/oCCLB-fc9Sc
+
 ## Part 2.
 
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
