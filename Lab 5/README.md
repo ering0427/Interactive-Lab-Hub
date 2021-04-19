@@ -180,7 +180,8 @@ During the lecture, we mentioned questions to help characterize a material:
 
 * The system can be used to prevent my dog from eating my cat's food (after adding other modalities). It can also be used to prevent my pets from getting close to dangerous objects such as stove tops and electrical outlets.
 * A good environment for the system should have ambient light. The camera should be placed slightly higher than the pet.
-* The system is good for detecting cats. It doesn't work as well for dogs that of similar sizes as cats.
+* The system is good for detecting cats. 
+* It doesn't work as well for dogs that of similar sizes as cats. Plush toys can also be misclassified as animals.
 
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
