@@ -184,8 +184,15 @@ During the lecture, we mentioned questions to help characterize a material:
 * It doesn't work as well for dogs that of similar sizes as cats. Plush toys can also be misclassified as animals.
 ![plot](plush_toys.png)
 
+The setup is here:
+![plot](Lab5_setup.HEIC)
+
+
 Here's a video showing cat detection:
 https://youtu.be/oCCLB-fc9Sc
+
+And dog detection:
+https://youtu.be/kK1BynAepMs
 
 ## Part 2.
 
