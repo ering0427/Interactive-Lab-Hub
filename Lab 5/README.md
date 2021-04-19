@@ -129,6 +129,10 @@ Try out different interactions outputs and inputs.
 
 I used the object detection model to detect my dog Martin and my cat Bella. The model is able to detect 90 classes of objects and when it detects a dog, it draws a purple rectangle around the dog and prints the text "dog". When it detects a cat, it draws a green rectangle around the cat and prints the text "cat". The model does not print on the screen for other objects detected.
 
+Here are two screenshots of the successful examples:
+![plot](cat_detected.png)
+![plot](dog_detected.png)
+
 ### Part C
 ### Test the interaction prototype
 
@@ -138,6 +142,7 @@ For example:
 1. When does it fail?
 1. When it fails, why does it fail?
 1. Based on the behavior you have seen, what other scenarios could cause problems?
+
 
 **Think about someone using the system. Describe how you think this will work.**
 1. Are they aware of the uncertainties in the system?
