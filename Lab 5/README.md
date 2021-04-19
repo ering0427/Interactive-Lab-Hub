@@ -161,7 +161,7 @@ The system may also fail when the animal is partially occluded by objects (e.g. 
 1. How could change your interactive system to address this?
 1. Are there optimizations you can try to do on your sense-making algorithm.
 
-It will be very bad if my cat is accidentally detected as a dog (although not very likely) and the system beeps her away. In the case where my dog is detected as a cat, he will eat all of my cat's food. To make my system better detect and classify my dog and my cat, I will put the camera near a good light source.
+It will be very bad if my cat is accidentally detected as a dog (although not very likely) and the system beeps her away. In the case where my dog is detected as a cat, he will eat all of my cat's food. To make my system better detect and classify my dog and my cat, I will put the camera near a good light source and adjust the detection confidence level.
 
 ### Part D
 ### Characterize your own Observant system
@@ -179,4 +179,9 @@ During the lecture, we mentioned questions to help characterize a material:
 **Include a short video demonstrating the answers to these questions.**
 
 * The system can be used to prevent my dog from eating my cat's food (after adding other modalities). It can also be used to prevent my pets from getting close to dangerous objects such as stove tops and electrical outlets.
-* A good environment for the system should have ambient light.
+* A good environment for the system should have ambient light. The camera should be placed slightly higher than the pet.
+* The system is good for detecting cats. It doesn't work as well for dogs that of similar sizes as cats.
+
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+To the TA who might be reading this: I accidentally broke my SD card. I'll finish the rest as soon as my new SD card arrives!
