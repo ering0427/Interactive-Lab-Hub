@@ -127,6 +127,8 @@ This can be as simple as the boat detector earlier.
 Try out different interactions outputs and inputs.
 **Describe and detail the interaction, as well as your experimentation.**
 
+I used the object detection model to detect my dog Martin and my cat Bella. The model is able to detect 90 classes of objects and when it detects a dog, it draws a purple rectangle around the dog and prints the text "dog". When it detects a cat, it draws a green rectangle around the cat and prints the text "cat". The model does not print on the screen for other objects detected.
+
 ### Part C
 ### Test the interaction prototype
 
