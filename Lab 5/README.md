@@ -129,6 +129,8 @@ Try out different interactions outputs and inputs.
 
 I used the object detection model to detect my dog Martin and my cat Bella. The model is able to detect 90 classes of objects and when it detects a dog, it draws a purple rectangle around the dog and prints the text "dog". When it detects a cat, it draws a green rectangle around the cat and prints the text "cat". The model does not print on the screen for other objects detected.
 
+This system is developed to make sure that my dog does not steal my cat's food. Ideally the camera will be placed in front of my cat's bowl and will "beep" when it detects my dog Martin to keep him away :)
+
 Here are two screenshots of the successful examples:
 ![plot](cat_detected.png)
 ![plot](dog_detected.png)
@@ -143,6 +145,13 @@ For example:
 1. When it fails, why does it fail?
 1. Based on the behavior you have seen, what other scenarios could cause problems?
 
+The system works well when there's ambient light and the animal's whole body is in the scene. It fails when the environment is dark and when the animal is partially in the scene. See examples below.
+
+Martin is detected as a cat when he is partially in the scene:
+![plot](dog_detected_as_cat.png)
+
+Martin is detected as both a dog and a cat when he is partially in the scene and is not facing the camera:
+![plot](failed_example.png)
 
 **Think about someone using the system. Describe how you think this will work.**
 1. Are they aware of the uncertainties in the system?
