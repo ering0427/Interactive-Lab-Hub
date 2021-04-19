@@ -185,7 +185,7 @@ During the lecture, we mentioned questions to help characterize a material:
 ![plot](plush_toys.png)
 
 The setup is here:
-![plot](Lab5_setup.HEIC)
+![plot](Lab5_setup.jpg)
 
 
 Here's a video showing cat detection:
