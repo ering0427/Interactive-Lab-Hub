@@ -192,7 +192,7 @@ Here's a video showing cat detection:
 https://youtu.be/oCCLB-fc9Sc
 
 And dog detection:
-https://youtu.be/kK1BynAepMs
+https://youtu.be/erWvOf7L32U
 
 ## Part 2.
 
@@ -200,3 +200,4 @@ Following exploration and reflection from Part 1, finish building your interacti
 
 **Include a short video demonstrating the finished result.**
 
+In Part 2, I added sound to the system. The system makes a sound when it detects a dog.
