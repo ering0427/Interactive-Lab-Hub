@@ -179,9 +179,14 @@ During the lecture, we mentioned questions to help characterize a material:
 **Include a short video demonstrating the answers to these questions.**
 
 * The system can be used to prevent my dog from eating my cat's food (after adding other modalities). It can also be used to prevent my pets from getting close to dangerous objects such as stove tops and electrical outlets.
-* A good environment for the system should have ambient light. The camera should be placed slightly higher than the pet.
+* A good environment for the system should have ambient light. The placement of the camera can largely affect the detection result.n The camera should be placed slightly higher than the pet.
 * The system is good for detecting cats. 
 * It doesn't work as well for dogs that of similar sizes as cats. Plush toys can also be misclassified as animals.
 ![plot](plush_toys.png)
 
+## Part 2.
+
+Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
+
+**Include a short video demonstrating the finished result.**
 
