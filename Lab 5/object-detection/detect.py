@@ -5,6 +5,10 @@
 import numpy as np
 import cv2
 import sys
+import pygame
+pygame.mixer.init()
+pygame.mixer.music.load("beep1.ogg")
+
 # Load a model imported from Tensorflow
 tensorflowNet = cv2.dnn.readNetFromTensorflow('frozen_inference_graph.pb', 'ssd_mobilenet_v2_coco_2018_03_29.pbtxt')
 
@@ -70,6 +74,8 @@ while(True):
                 cv2.rectangle(img, (int(left), int(top)), (int(right), int(bottom)), COLORS[idx], thickness=2)
                 y = int(top) - 15 if int(top) - 15 > 15 else int(top) + 15
                 cv2.putText(img, CLASSES[idx], (int(left), y),cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
+                if CLASSES[idx] == 'dog':
+                    pygame.mixer.music.play()
     if webCam:
         if sys.argv[-1] == "noWindow":
            print("Finished a frame")
