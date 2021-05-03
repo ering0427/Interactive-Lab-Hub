@@ -95,10 +95,19 @@ We designed a simple version of the blackjack game that allows players to remote
 4. If the player exceeds a sum of 21 ("busts"), the player loses.
 
 
-**2. Diagram the architecture of the system.** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
+**2. Diagram the architecture of the system.** 
+Participants: Our simplified blackjack game involves 2 players. Observers are welcome!
 
-**3. Build a working prototype of the system.** Do think about the user interface: if someone encountered these bananas, would they know how to interact with them? Should they know what to expect?
+Time/location: There is no restraint of time and space! Communicate with your friend and start the gamble.
+
+Operations: Players need to be close enough to the twizzlers to select “Yes” or “No”. 
+
+Sound: No voice input/output is included.
+Input, output and computation: Players provide different input (“Yes” or “No”) at their own risk. The pi prints the output on the screen, showing the current player and sum after adding in the randomly generated number, should players choose to draw cards.
+
+
+**3. Build a working prototype of the system.** 
+A novice user would need to read the rules of the game and the instructions on how to use the device before playing the game because our rules are different from the classic blackjack.  To help the user understand the current state of the game, the screen on the pie shows the current score and the current player. Two twizzlers labeled "Yes" and "No" are provided as an input device to the user. We chose to use the touch input because it is a quiet interface and allows the users to play the game in quiet places (e.g. libraries and classrooms.)
+
 
 **4. Document the working prototype in use.** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
-
-**5. BONUS (Wendy didn't approve this so you should probably ignore it)** get the whole class to run your code and make your distributed system BIGGER.
