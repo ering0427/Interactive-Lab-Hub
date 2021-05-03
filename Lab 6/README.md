@@ -83,9 +83,17 @@ Glitch is a great tool for prototyping sites, interfaces and web-apps that's wor
 
 ## Make it your own
 
-Find at least one class (more are okay) partner, and design a distributed application together. 
+I worked with Jingjun Wang (jw2668) for this assignment.
 
-**1. Explain your design** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
+**1. Explain your design** 
+
+We designed a simple version of the blackjack game that allows players to remotely participate. Our current version of the game only allows two players at a time but the game can be easily modified to support more players. The rules of the game are described as follows:
+
+1. The players share the score.
+2. At each turn, a random number between 1 to 10 is generated and the number is not shown to the players.
+3. The players take turns and choose "Yes" or "No" to receive or reject the current number.
+4. If the player exceeds a sum of 21 ("busts"), the player loses.
+
 
 **2. Diagram the architecture of the system.** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
 
