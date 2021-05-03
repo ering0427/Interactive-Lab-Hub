@@ -67,13 +67,13 @@ font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 20)
 
 def report(current, turn, state):
 
-	image = Image.new("RGB", (width, height))
+    image = Image.new("RGB", (width, height))
     draw = ImageDraw.Draw(image)
 
-    l1 = 'First to reach 29 wins!'
-    l2 = 'Current sum is '+str(current).
+    l1 = 'First to exceed 21 loses!'
+    l2 = 'Current sum is '+str(current)
     if(state == 0):
-    	l3 = "Play "+str(turn)", what do you add?"
+    	l3 = "Player "+str(turn)+", what do you add?"
     elif(state == 1):
     	l3 = "Player 1 wins!"
     elif(state == 2):
@@ -85,7 +85,7 @@ def report(current, turn, state):
     draw.text((x, y), l2, font=font, fill="#FFFFFF")
     y += font.getsize(l2)[1]
     draw.text((x, y), l3, font=font, fill="#FFFFFF")
-	disp.image(image, rotation)
+    disp.image(image, rotation)
 
 
 send_to = f"IDD/test/helen"
@@ -113,29 +113,36 @@ client.connect(
 current = 0
 state = 0
 turn = 1
-
+move = False
 while True:
 
-	client.loop()
+    client.loop()
 
     if (turn == 1):
 
     	if (state == 0):
 
-	    	count = 0
-	    	for i in range(1, 3):
-			    if(mpr121[i].value):
-			    	current += i
-			    	break
+            val = random.randrange(1,11)
+            if (mpr121[0].value):
+                turn = 1
+                client.publish(send_to, str(current) + "," str(turn) + "," + str(state))
+            elif(mpr121[1].value):
+                current += val
+                move = True
 
-			if(current >= 21):
-				state = 1
-			else: 
-				turn = 2
+            if(current == 21):
+                state = 2
+                client.publish(send_to, str(current)+","+str(turn)+","+str(state)) 
+            elif(current > 21):
+                state = 1
+                client.publish(send_to,str(current)+","+str(turn)+","+str(state))
+            elif (move): 
+                turn = 2
+                move = False
 		    
-			client.publish(send_to, str(current)+","+str(turn)+","+str(state))
+                client.publish(send_to, str(current)+","+str(turn)+","+str(state))
 			
-	report(current, turn, state)
+    report(current, turn, state)
 
 
 

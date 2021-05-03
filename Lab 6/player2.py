@@ -7,7 +7,7 @@ import adafruit_mpr121
 from adafruit_rgb_display.rgb import color565
 import adafruit_rgb_display.st7789 as st7789
 import webcolors
-
+import random
 import paho.mqtt.client as mqtt
 import uuid
 
@@ -67,13 +67,13 @@ font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 20)
 
 def report(current, turn, state):
 
-	image = Image.new("RGB", (width, height))
+    image = Image.new("RGB", (width, height))
     draw = ImageDraw.Draw(image)
 
-    l1 = 'First to reach 29 wins!'
-    l2 = 'Current sum is '+str(current).
+    l1 = 'First to exceeds 21 loses!'
+    l2 = 'Current sum is '+str(current)
     if(state == 0):
-    	l3 = "Play "+str(turn)", what do you add?"
+    	l3 = "Player "+str(turn)+", what do you add?"
     elif(state == 1):
     	l3 = "Player 1 wins!"
     elif(state == 2):
@@ -85,7 +85,7 @@ def report(current, turn, state):
     draw.text((x, y), l2, font=font, fill="#FFFFFF")
     y += font.getsize(l2)[1]
     draw.text((x, y), l3, font=font, fill="#FFFFFF")
-	disp.image(image, rotation)
+    disp.image(image, rotation)
 
 
 send_to = f"IDD/test/erin"
@@ -100,6 +100,7 @@ def on_message(cleint, userdata, msg):
 	global current
 	global turn
 	global state
+	print(message)
 	current, turn, state =  int(message[0]), int(message[1]), int(message[2])
 
 client.on_connect = on_connect
@@ -113,27 +114,35 @@ client.connect(
 current = 0
 state = 0
 turn = 1
+move = False
 
 while True:
 
-	client.loop()
+    client.loop()
 
     if (turn == 2):
 
-    	if (state == 0):
+        if (state == 0):
 
-	    	for i in range(1, 3):
-			    if(mpr121[i].value):
-			    	current += i
-			    	break
+            val = random.randrange(1,11)
+            if(mpr121[1].value):
+                turn = 1
+                client.publish(send_to,str(current)+","+str(turn)+","+str(state))
+            elif(mpr121[2].value):
+                current += val
+                move = True
 
-			if(current >= 29):
-				state = 2
-			else: 
-				turn = 1
-		    
-		    client.publish(send_to, str(current)+","+str(turn)+","+str(state))
+            if(current == 21):
+                state = 2
+                client.publish(send_to, str(current) +","+str(turn)+","+str(state))
+            elif (current > 21):
+                state = 1
+                client.publish(send_to, str(current)+","+str(turn)+","+str(state))
+            elif (move):
+                turn = 1
+                move = False    
+                client.publish(send_to, str(current)+","+str(turn)+","+str(state))
 			
-	report(current, turn, state)
+    report(current, turn, state)
 
 
