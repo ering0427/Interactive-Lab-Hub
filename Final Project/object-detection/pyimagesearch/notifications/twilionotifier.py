@@ -21,8 +21,9 @@ class TwilioNotifier:
 		)
 
 		# get the filename and upload the video in public read mode
-		filename = tempVideo.path[tempVideo.path.rfind("/") + 1:]
-		s3.upload_file(tempVideo.path, self.conf["s3_bucket"],
+		#filename = tempVideo.path[tempVideo.path.rfind("/") + 1:]
+		filename = 'output.mp4'
+		s3.upload_file('/home/pi/Interactive-Lab-Hub/Final\\ Project/object-detection/output.mp4', self.conf["s3_bucket"],
 			filename, ExtraArgs={"ACL": "public-read",
 			"ContentType": "video/mp4"})
 
@@ -39,4 +40,4 @@ class TwilioNotifier:
 			from_=self.conf["twilio_from"], body=msg, media_url=url)
 		
 		# delete the temporary file
-		tempVideo.cleanup()
+		#tempVideo.cleanup()
