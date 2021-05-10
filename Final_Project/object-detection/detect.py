@@ -15,14 +15,10 @@ import argparse
 import imutils
 import signal
 import time
+import pygame
+pygame.mixer.init()
+pygame.mixer.music.load("beep1.ogg")
 
-
-# keyboard interrupt
-#def signal_handler(sig, frame):
-#	print("[INFO] You pressed `ctrl + c`! Closing detector" \
-#		" application...")
-#	sys.exit(0)
-# construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-c", "--conf", required=True,
 	help="Path to the input configuration file")
@@ -34,9 +30,6 @@ tn = TwilioNotifier(conf)
 
 catAppear = False
 notifSent = False
-
-#vs = VideoStream(usePiCamera=True).start()
-#time.sleep(2.0)
 
 writer = None
 W = None
@@ -85,19 +78,10 @@ while(True):
     if webCam:
         ret, img = cap.read()
 
-    #frame = vs.read()
     catPrevAppear = catAppear
 
     rows, cols, channels = img.shape
-    # quit if there was a problem grabbing a frame
-    #if frame is None:
-    #    break
 
-    # resize the frame and convert the frame to grayscale
-    #frame = imutils.resize(frame, width=200)
-
-    #if W is None or H is None:
-    #    (H, W) = frame.shape[:2]
     # Use the given image as input, which needs to be blob(s).
     tensorflowNet.setInput(cv2.dnn.blobFromImage(img, size=(300, 300), swapRB=True, crop=False))
 
@@ -108,19 +92,33 @@ while(True):
     for detection in networkOutput[0,0]:
         score = float(detection[2])
         idx = int(detection[1])
-        if CLASSES[idx] == 'cat' or CLASSES[idx]=='dog':
+        if CLASSES[idx]=='dog':
+            if score > 0.2:
+                left = detection[3] * cols
+                top = detection[4] * rows
+                right = detection[5] * cols
+                bottom = detection[6] * rows
+                #draw a red rectangle around detected objects
+                cv2.rectangle(img, (int(left), int(top)), (int(right), int(bottom)), COLORS[idx], thickness=2)
+                y = int(top) - 15 if int(top) - 15 > 15 else int(top) + 15
+                cv2.putText(img, CLASSES[idx], (int(left), y),cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
+                pygame.mixer.music.play()
+
+        elif CLASSES[idx] == 'cat':
             if score > 0.2:
                 left = detection[3] * rows
                 top = detection[4] * cols
                 right = detection[5] * cols
                 bottom = detection[6] * rows
+                #draw a red rectangle around detected objects
+                cv2.rectangle(frame, (int(left), int(top)), (int(right), int(bottom)), COLORS[idx], thickness=2)
+                y = int(top) - 15 if int(top) - 15 > 15 else int(top) + 15
+                cv2.putText(frame, CLASSES[idx], (int(left), y),cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
+
                 catAppear = True
                 # if cat just appeared
                 if catAppear and not catPrevAppear:
                     startTime = datetime.now()
-		    # create a temporary video file and initialize the video
-		    # writer object
-                    #tempVideo = TempFile(ext=".mp4"
                     fourcc = cv2.VideoWriter_fourcc(*"mp4v")
                     writer = cv2.VideoWriter('/home/pi/Interactive-Lab-Hub/Final_Project/object-detection/output.mp4', fourcc, 30, (cols, rows),True)
                     
@@ -128,24 +126,36 @@ while(True):
                 # if cat previously appeared
                 elif catPrevAppear:
                     timeDiff = (datetime.now() - startTime).seconds
-                    if catAppear and timeDiff > 8:
+                    # if cat appears for more than 20 seconds
+                    if catAppear and timeDiff > 20:
                         if not notifSent:
-                            msg = "Bella is eating!"
-                            if writer is not None:
-                                writer.release()
+                            msg = "Bella is here!"
+                            writer.release()
                             writer = None
                             tn.send(msg, 'output.mp4')
                             notifSent = True
-                            print("Bella is eating!")
+                            print("Bella is here!")
+        
+        else:
+            # Bella left
+            if catPrevAppear:
+                if notifSent:
+                    notifSent = False
+                else:
+                    endTime = datetime.now()
+                    totalSeconds = (endTime - startTime).seconds
+                    dateAppeared = date.today().strftime("%A, %B %d %Y")
+                    msg = "Bella ate her food on {} at {} for {} " \
+					"seconds.".format(dateOpened,
+					startTime.strftime("%I:%M%p"), totalSeconds)
+                    writer.release()
+                    writer = None
+                    tn.send(msg, 'output.mp4')
+            
+                        
                 
-                #draw a red rectangle around detected objects
-                #cv2.rectangle(frame, (int(left), int(top)), (int(right), int(bottom)), COLORS[idx], thickness=2)
-                #y = int(top) - 15 if int(top) - 15 > 15 else int(top) + 15
-                #cv2.putText(frame, CLASSES[idx], (int(left), y),cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
-                #if CLASSES[idx] == 'dog':
-                    #pygame.mixer.music.play()
-    if notifSent:
-        notifSent = False
+         
+
     if webCam:
         if sys.argv[-1] == "noWindow":
            print("Finished a frame")
