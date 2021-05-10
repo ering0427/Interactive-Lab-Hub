@@ -35,8 +35,8 @@ tn = TwilioNotifier(conf)
 catAppear = False
 notifSent = False
 
-vs = VideoStream(usePiCamera=True).start()
-time.sleep(2.0)
+#vs = VideoStream(usePiCamera=True).start()
+#time.sleep(2.0)
 
 writer = None
 W = None
@@ -57,9 +57,9 @@ CLASSES = ["background", "person", "bicycle", "car", "motorcycle",
             "unknown", "unknown", "toilet", "unknown", "tv", "laptop", "mouse", "remote", "keyboard",
             "cell phone", "microwave", "oven", "toaster", "sink", "refrigerator", "unknown",
             "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush" ]
-#COLORS = np.random.uniform(0, 255, size=(len(CLASSES), 3))
-#img = None
-#webCam = False
+COLORS = np.random.uniform(0, 255, size=(len(CLASSES), 3))
+img = None
+webCam = False
 #if(len(sys.argv)>1 and not sys.argv[-1]== "noWindow"):
 #   try:
 #      print("I'll try to read your image");
@@ -70,36 +70,36 @@ CLASSES = ["background", "person", "bicycle", "car", "motorcycle",
 #      print("Failed to load the image are you sure that:", sys.argv[1],"is a path to an image?")
 #else:
 
-#try:
-#  print("Trying to open the Webcam.")
-#  cap = cv2.VideoCapture(0)
-#  if cap is None or not cap.isOpened():
-#     raise("No camera")
-#  webCam = True
-#except:
-#  img = cv2.imread("../data/test.jpg")
-#  print("Using default image.")
+try:
+  print("Trying to open the Webcam.")
+  cap = cv2.VideoCapture(0)
+  if cap is None or not cap.isOpened():
+     raise("No camera")
+  webCam = True
+except:
+  img = cv2.imread("../data/test.jpg")
+  print("Using default image.")
 
 
 while(True):
-    #if webCam:
-    #    ret, img = cap.read()
+    if webCam:
+        ret, img = cap.read()
 
-    frame = vs.read()
+    #frame = vs.read()
     catPrevAppear = catAppear
 
-    #rows, cols, channels = img.shape
+    rows, cols, channels = img.shape
     # quit if there was a problem grabbing a frame
-    if frame is None:
-        break
+    #if frame is None:
+    #    break
 
     # resize the frame and convert the frame to grayscale
-    frame = imutils.resize(frame, width=200)
+    #frame = imutils.resize(frame, width=200)
 
-    if W is None or H is None:
-        (H, W) = frame.shape[:2]
+    #if W is None or H is None:
+    #    (H, W) = frame.shape[:2]
     # Use the given image as input, which needs to be blob(s).
-    tensorflowNet.setInput(cv2.dnn.blobFromImage(frame, size=(300, 300), swapRB=True, crop=False))
+    tensorflowNet.setInput(cv2.dnn.blobFromImage(img, size=(300, 300), swapRB=True, crop=False))
 
     # Runs a forward pass to compute the net output
     networkOutput = tensorflowNet.forward()
@@ -110,28 +110,29 @@ while(True):
         idx = int(detection[1])
         if CLASSES[idx] == 'cat' or CLASSES[idx]=='dog':
             if score > 0.2:
-                left = detection[3] * H
-                top = detection[4] * W
-                right = detection[5] * W
-                bottom = detection[6] * H
+                left = detection[3] * rows
+                top = detection[4] * cols
+                right = detection[5] * cols
+                bottom = detection[6] * rows
                 catAppear = True
                 # if cat just appeared
                 if catAppear and not catPrevAppear:
                     startTime = datetime.now()
 		    # create a temporary video file and initialize the video
 		    # writer object
-                    #tempVideo = TempFile(ext=".mp4")
-                    
-                    writer = cv2.VideoWriter('output.mp4', 0x21, 30, (W, H),True)
+                    #tempVideo = TempFile(ext=".mp4"
+                    fourcc = cv2.VideoWriter_fourcc(*"mp4v")
+                    writer = cv2.VideoWriter('/home/pi/Interactive-Lab-Hub/Final_Project/object-detection/output.mp4', fourcc, 30, (cols, rows),True)
                     
                     print("Cat appeared!")
                 # if cat previously appeared
                 elif catPrevAppear:
                     timeDiff = (datetime.now() - startTime).seconds
-                    if catAppear and timeDiff > 2:
+                    if catAppear and timeDiff > 8:
                         if not notifSent:
                             msg = "Bella is eating!"
-                            writer.release()
+                            if writer is not None:
+                                writer.release()
                             writer = None
                             tn.send(msg, 'output.mp4')
                             notifSent = True
@@ -145,24 +146,24 @@ while(True):
                     #pygame.mixer.music.play()
     if notifSent:
         notifSent = False
-    #if webCam:
-    #    if sys.argv[-1] == "noWindow":
-    #       print("Finished a frame")
-    #       cv2.imwrite('detected_out.jpg',img)
-    #       continue
-    #    cv2.imshow('detected (press q to quit)',img)
-    #    if cv2.waitKey(1) & 0xFF == ord('q'):
-    #        cap.release()
-    #        break
-    #else:
-    #    break
+    if webCam:
+        if sys.argv[-1] == "noWindow":
+           print("Finished a frame")
+           cv2.imwrite('detected_out.jpg',img)
+           continue
+        cv2.imshow('detected (press q to quit)',img)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            cap.release()
+            break
+    else:
+        break
     if writer is not None:
-        writer.write(frame)
+        writer.write(img)
 
 if writer is not None:
     writer.release()
 
-cv2.imwrite('detected_out.jpg',frame)
+cv2.imwrite('detected_out.jpg',img)
 cv2.destroyAllWindows()
 
 
