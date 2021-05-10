@@ -30,6 +30,7 @@ tn = TwilioNotifier(conf)
 
 catAppear = False
 notifSent = False
+intruderFound = False
 
 writer = None
 W = None
@@ -92,12 +93,19 @@ while(True):
     for detection in networkOutput[0,0]:
         score = float(detection[2])
         idx = int(detection[1])
+        # if a dog is detected
         if CLASSES[idx]=='dog':
             if score > 0.2:
                 left = detection[3] * cols
                 top = detection[4] * rows
                 right = detection[5] * cols
                 bottom = detection[6] * rows
+                cv2.imwrite('intruder.jpg',img)
+                print("Intruder detected!")
+                msg = "Intruder detected!"
+                if not intruderFound:
+                    intruderFound = True
+                    tn.send(msg, 'intruder.jpg')
                 #draw a red rectangle around detected objects
                 cv2.rectangle(img, (int(left), int(top)), (int(right), int(bottom)), COLORS[idx], thickness=2)
                 y = int(top) - 15 if int(top) - 15 > 15 else int(top) + 15
@@ -111,9 +119,9 @@ while(True):
                 right = detection[5] * cols
                 bottom = detection[6] * rows
                 #draw a red rectangle around detected objects
-                cv2.rectangle(frame, (int(left), int(top)), (int(right), int(bottom)), COLORS[idx], thickness=2)
+                cv2.rectangle(img, (int(left), int(top)), (int(right), int(bottom)), COLORS[idx], thickness=2)
                 y = int(top) - 15 if int(top) - 15 > 15 else int(top) + 15
-                cv2.putText(frame, CLASSES[idx], (int(left), y),cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
+                cv2.putText(img, CLASSES[idx], (int(left), y),cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
 
                 catAppear = True
                 # if cat just appeared
@@ -129,16 +137,17 @@ while(True):
                     # if cat appears for more than 20 seconds
                     if catAppear and timeDiff > 20:
                         if not notifSent:
-                            msg = "Bella is here!"
+                            msg = "Bella is still eating!"
                             writer.release()
                             writer = None
                             tn.send(msg, 'output.mp4')
                             notifSent = True
-                            print("Bella is here!")
+                            print("Bella is still eating!")
         
         else:
             # Bella left
             if catPrevAppear:
+                catPrevAppear = False
                 if notifSent:
                     notifSent = False
                 else:
@@ -146,9 +155,10 @@ while(True):
                     totalSeconds = (endTime - startTime).seconds
                     dateAppeared = date.today().strftime("%A, %B %d %Y")
                     msg = "Bella ate her food on {} at {} for {} " \
-					"seconds.".format(dateOpened,
+					"seconds.".format(dateAppeared,
 					startTime.strftime("%I:%M%p"), totalSeconds)
-                    writer.release()
+                    if writer is not None:
+                        writer.release()
                     writer = None
                     tn.send(msg, 'output.mp4')
             
