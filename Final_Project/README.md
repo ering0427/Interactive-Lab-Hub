@@ -12,9 +12,16 @@ Final Project Documentation due - May 19
 
  
 ## Description
-For this project, I built a security camera to make sure that my cat Bella eats her food. The camera is placed in front of Bella's bowl and it sends an image/video clip via text message to my phone when it detects Bella. The system allows me to have a better understanding of Bella eating habbit especially when I'm not at home.
+For this project, I built a security camera to understand my cat Bella's eating schedule. The camera is placed in front of Bella's bowl and it sends an image/video clip via text message to my phone when it detects Bella. The system allows me to have a better understanding of Bella's eating habbit especially when I'm not at home. It can also detect intruders (in my case, a dog) and send a photo of the intruder to my phone. When it detects an intruder, the system plays a pre-recorded audio: " No! Bad boy!"
 
-## Deliverables
+## The Process
+
+I used AWS S3 to store recorded videos/images and Twilio to send the stored videos/images to my phone via text messages.
+
+Security Camera V 1.0 can only detect my cat Bella. The system starts counting when my cat is in the scene. It sends a 2 seconds video to my phone if the cat stays in the scene for 2 seconds.
+
+Security Camera V 2.0 can protect Bella's food. It detects my dog Martin as an intruder and sends a message to my phone. It also plays a pre-recorded audio "No! Bad boy!"
+
 
 1. Documentation of design process
 2. Archive of all code, design patterns, etc. used in the final design. (As with labs, the standard should be that the documentation would allow you to recreate your project if you woke up with amnesia.)
