@@ -14,6 +14,8 @@ Final Project Documentation due - May 19
 ## Description
 For this project, I built a security camera to understand my cat Bella's eating schedule. The camera is placed in front of Bella's bowl and it sends an image/video clip via text message to my phone when it detects Bella. The system allows me to have a better understanding of Bella's eating habbit especially when I'm not at home. It can also detect intruders (in my case, a dog) and send a photo of the intruder to my phone. When it detects an intruder, the system plays a pre-recorded audio: " No! Bad boy!"
 
+https://youtu.be/0V6QAqEnvfo
+
 ## The Process
 
 I used AWS S3 to store recorded videos/images and Twilio to send the stored videos/images to my phone via text messages.
