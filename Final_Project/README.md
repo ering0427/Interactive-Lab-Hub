@@ -16,7 +16,7 @@ For this project, I built a security camera to understand my cat Bella's eating 
 
 https://youtu.be/0V6QAqEnvfo
 
-## The Process
+## Documentation
 
 I used AWS S3 to store recorded videos/images and Twilio to send the stored videos/images to my phone via text messages.
 
