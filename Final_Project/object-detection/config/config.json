@@ -12,7 +12,7 @@
 
 	// variables to store your twilio account credentials
 	"twilio_sid": "AC27bb328391be4b8e1f4cba65f796d011",
-	"twilio_auth": "2038779192f41db2f507a8b40e0a65dd",
+	"twilio_auth": "95f63585d499d57cad6978c253404b85",
 	"twilio_to": "+1-717-696-9434",
 	"twilio_from": "+1-405-673-8323"
 }

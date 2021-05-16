@@ -17,7 +17,7 @@ import signal
 import time
 import pygame
 pygame.mixer.init()
-pygame.mixer.music.load("beep1.ogg")
+pygame.mixer.music.load("recording.ogg")
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-c", "--conf", required=True,
@@ -80,6 +80,7 @@ while(True):
         ret, img = cap.read()
 
     catPrevAppear = catAppear
+    dogPrevAppear = intruderFound
 
     rows, cols, channels = img.shape
 
@@ -96,21 +97,30 @@ while(True):
         # if a dog is detected
         if CLASSES[idx]=='dog':
             if score > 0.2:
+                intruderFound = True
                 left = detection[3] * cols
                 top = detection[4] * rows
                 right = detection[5] * cols
                 bottom = detection[6] * rows
                 cv2.imwrite('intruder.jpg',img)
-                print("Intruder detected!")
-                msg = "Intruder detected!"
-                if not intruderFound:
-                    intruderFound = True
-                    tn.send(msg, 'intruder.jpg')
-                #draw a red rectangle around detected objects
-                cv2.rectangle(img, (int(left), int(top)), (int(right), int(bottom)), COLORS[idx], thickness=2)
-                y = int(top) - 15 if int(top) - 15 > 15 else int(top) + 15
-                cv2.putText(img, CLASSES[idx], (int(left), y),cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
-                pygame.mixer.music.play()
+                
+                if intruderFound and not dogPrevAppear:
+                    startT = datetime.now()
+                elif dogPrevAppear:
+                    # time difference
+                    timeD = (datetime.now() - startT).seconds
+                    # if dog appears for more than 2 seconds
+                    if intruderFound and timeDiff > 2:
+                        print("Intruder detected!")
+
+                        dateA = date.today().strftime("%A, %B %d %Y")
+                        msg = "Intruder detected on {} at {}! Intruder is stealing food! Please take action!".format(dateA,datetime.now().strftime("%I:%M%p"))
+                        tn.send(msg, 'intruder.jpg')
+                        #draw a red rectangle around detected objects
+                        cv2.rectangle(img, (int(left), int(top)), (int(right), int(bottom)), COLORS[idx], thickness=2)
+                        y = int(top) - 15 if int(top) - 15 > 15 else int(top) + 15
+                        cv2.putText(img, 'intruder', (int(left), y),cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
+                        pygame.mixer.music.play()
 
         elif CLASSES[idx] == 'cat':
             if score > 0.2:
@@ -140,7 +150,7 @@ while(True):
                             msg = "Bella is still eating!"
                             writer.release()
                             writer = None
-                            tn.send(msg, 'output.mp4')
+                            #tn.send(msg, 'output.mp4')
                             notifSent = True
                             print("Bella is still eating!")
         
@@ -153,14 +163,15 @@ while(True):
                 else:
                     endTime = datetime.now()
                     totalSeconds = (endTime - startTime).seconds
-                    dateAppeared = date.today().strftime("%A, %B %d %Y")
-                    msg = "Bella ate her food on {} at {} for {} " \
+                    if totalSeconds >= 2:
+                        dateAppeared = date.today().strftime("%A, %B %d %Y")
+                        msg = "Bella ate her food on {} at {} for {} " \
 					"seconds.".format(dateAppeared,
 					startTime.strftime("%I:%M%p"), totalSeconds)
                     if writer is not None:
                         writer.release()
                     writer = None
-                    tn.send(msg, 'output.mp4')
+                    #tn.send(msg, 'output.mp4')
             
                         
                 
