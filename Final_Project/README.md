@@ -32,6 +32,8 @@ Security Camera V 1.0 can only detect my cat Bella. The system starts counting w
 
 Security Camera V 2.0 can protect Bella's food. It detects my dog Martin as an intruder and sends a message to my phone. It also plays a pre-recorded audio "No! Bad boy!"
 
+To use the system, run ```python3 detect.py --conf config/config.json```
+
 Here are some examples of the detection output:
 ![plot](intruder.png)
 ![plot](cat.png)
@@ -48,4 +50,4 @@ Some of the issues I found:
 Here are some of the improvements I made to the system:
 1. Modify the code to allow one predicted class per frame.
 2. Only allows the system to send me a message and a video clip if Bella is in the scene for more than 2 seconds. If Bella stays in the scene for more than 20 seconds, the camera stops recording and send me a message saying "Bella is still eating."
-3. Adding a threshold of 2 seconds for Martin's detection in case Martin is just passing by.
+3. Add a threshold of 2 seconds for Martin's detection in case Martin is just passing by.
