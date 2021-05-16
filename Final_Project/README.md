@@ -18,9 +18,12 @@ https://youtu.be/0V6QAqEnvfo
 
 ## Documentation
 
-The idea of the interaction is shown here:
+The original idea was to build an IoT-capable security camera that sends a video clip of Bella to me whenever she eats her food. The system can be useful especially when I'm not at hoem. THe idea of the interaction is shown here:
 
 ![plot](storyboard1.jpg)
+
+After making the security camera, I realized that my dog Martin sometimes steals Bella's food when I'm not around. Therefore, I added additional functionality to make the system capable of recognizing Martin the intruder.
+
 ![plot](storyboard2.jpg)
 I used AWS S3 to store recorded videos/images and Twilio to send the stored videos/images to my phone via text messages.
 
