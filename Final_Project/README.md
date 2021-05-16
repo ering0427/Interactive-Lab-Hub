@@ -18,6 +18,10 @@ https://youtu.be/0V6QAqEnvfo
 
 ## Documentation
 
+The idea of the interaction is shown here:
+
+![plot](storyboard1.jpg)
+![plot](storyboard2.jpg)
 I used AWS S3 to store recorded videos/images and Twilio to send the stored videos/images to my phone via text messages.
 
 Security Camera V 1.0 can only detect my cat Bella. The system starts counting when my cat is in the scene. It sends a 2 seconds video to my phone if the cat stays in the scene for 2 seconds.
