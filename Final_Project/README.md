@@ -33,18 +33,11 @@ Security Camera V 1.0 can only detect my cat Bella. The system starts counting w
 Security Camera V 2.0 can protect Bella's food. It detects my dog Martin as an intruder and sends a message to my phone. It also plays a pre-recorded audio "No! Bad boy!"
 
 Here are some of the issues I found:
-1. The detection accuracy is not great. My dog and my cat can be misdetected very often. When my cat is detected as both as a dog and as a cat in continuous frames, I will receive multiple messages. Here is a video showing a failure example: https://youtu.be/voapi1MoN7Y
-2. If Bella sits in front of the camera for the entire afternoon, my phone will explode (because the system will keep sending me videos).
+1. The detection accuracy is not great. Bella can be recognized both as a cat and a dog in one frame.
+2. When my cat is detected as both as a dog and as a cat in continuous frames, I will receive multiple messages. Here is a video showing a failure example: https://youtu.be/voapi1MoN7Y
+3. If Bella sits in front of the camera for the entire afternoon, my phone will explode (because the system will keep sending me videos).
 
 Here are some of the improvements I made to the system:
-1. Only allows the system to send me a message and a video clip if Bella is in the scene for more than 2 seconds. If Bella stays in the scene for more than 20 seconds, the camera stops recording and send me a message saying "Bella is still eating."
-
-1. Documentation of design process
-2. Archive of all code, design patterns, etc. used in the final design. (As with labs, the standard should be that the documentation would allow you to recreate your project if you woke up with amnesia.)
-3. Video of someone using your project (or as safe a version of that as can be managed given social distancing)
-4. Reflections on process (What have you learned or wish you knew at the start?)
-
-## Examples
-
-[Here is a list of good final projects from previous classes.](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/wiki/Previous-Final-Projects)
-This version of the class is very different, but it may be useful to see these.
+1. Modify the code to allow one predicted class per frame.
+2. Only allows the system to send me a message and a video clip if Bella is in the scene for more than 2 seconds. If Bella stays in the scene for more than 20 seconds, the camera stops recording and send me a message saying "Bella is still eating."
+3. Adding a threshold of 2 seconds for Martin's detection in case Martin is just passing by.
