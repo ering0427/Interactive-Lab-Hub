@@ -37,8 +37,8 @@ Here are some examples of the detection output:
 ![plot](cat.png)
 
 Some messages I received:
-![plot](message_intruder.png)
-![plot](message_Bella.png)
+![plot](message_intruder.PNG)
+![plot](message_Bella.PNG)
 
 Some of the issues I found:
 1. The detection accuracy is not great. Bella can be recognized both as a cat and a dog in one frame.
