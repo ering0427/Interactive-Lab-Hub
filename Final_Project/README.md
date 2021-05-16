@@ -49,5 +49,11 @@ Some of the issues I found:
 
 Here are some of the improvements I made to the system:
 1. Modify the code to allow one predicted class per frame.
-2. Only allows the system to send me a message and a video clip if Bella is in the scene for more than 2 seconds. If Bella stays in the scene for more than 20 seconds, the camera stops recording and send me a message saying "Bella is still eating."
+2. Only allow the system to send me a message and a video clip if Bella is in the scene for more than 2 seconds. If Bella stays in the scene for more than 20 seconds, the camera stops recording and send me a message saying "Bella is still eating."
 3. Add a threshold of 2 seconds for Martin's detection in case Martin is just passing by.
+
+## Reflection
+
+1. The system works well when there is a good light source. I have to turn on the lights in order for it to work at night.
+2. The bowl needs to be placed 30 centimeters away from the camera for the system to better detect Bella and Martin.
+3. Bella and Martin are still sometimes misdetected. My guess is that Bella and Martin are approximately of the same size. Martin does look like a cat sometimes.
