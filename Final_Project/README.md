@@ -26,7 +26,7 @@ After making the security camera, I realized that my dog Martin sometimes steals
 
 ![plot](storyboard2.jpg)
 
-I used AWS S3 to store recorded videos/images and Twilio to send the stored videos/images to my phone via text messages.
+I used AWS S3 to store recorded videos/images and Twilio to send the stored videos/images to my phone via text messages. Here I found a tutorial: https://www.pyimagesearch.com/2019/03/25/building-a-raspberry-pi-security-camera-with-opencv/
 
 Security Camera V 1.0 can only detect my cat Bella. The system starts counting when my cat is in the scene. It sends a 2 seconds video to my phone if the cat stays in the scene for 2 seconds.
 
