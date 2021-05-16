@@ -25,6 +25,7 @@ The original idea was to build an IoT-capable security camera that sends a video
 After making the security camera, I realized that my dog Martin sometimes steals Bella's food when I'm not around. Therefore, I added additional functionality to make the system capable of recognizing Martin the intruder.
 
 ![plot](storyboard2.jpg)
+
 I used AWS S3 to store recorded videos/images and Twilio to send the stored videos/images to my phone via text messages.
 
 Security Camera V 1.0 can only detect my cat Bella. The system starts counting when my cat is in the scene. It sends a 2 seconds video to my phone if the cat stays in the scene for 2 seconds.
@@ -35,6 +36,8 @@ Here are some of the issues I found:
 1. The detection accuracy is not great. My dog and my cat can be misdetected very often. When my cat is detected as both as a dog and as a cat in continuous frames, I will receive multiple messages. Here is a video showing a failure example: https://youtu.be/voapi1MoN7Y
 2. If Bella sits in front of the camera for the entire afternoon, my phone will explode (because the system will keep sending me videos).
 
+Here are some of the improvements I made to the system:
+1. Only allows the system to send me a message and a video clip if Bella is in the scene for more than 2 seconds. If Bella stays in the scene for more than 20 seconds, the camera stops recording and send me a message saying "Bella is still eating."
 
 1. Documentation of design process
 2. Archive of all code, design patterns, etc. used in the final design. (As with labs, the standard should be that the documentation would allow you to recreate your project if you woke up with amnesia.)
