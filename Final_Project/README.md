@@ -32,7 +32,15 @@ Security Camera V 1.0 can only detect my cat Bella. The system starts counting w
 
 Security Camera V 2.0 can protect Bella's food. It detects my dog Martin as an intruder and sends a message to my phone. It also plays a pre-recorded audio "No! Bad boy!"
 
-Here are some of the issues I found:
+Here are some examples of the detection output:
+![plot](intruder.png)
+![plot](cat.png)
+
+Some messages I received:
+![plot](message_intruder.png)
+![plot](message_Bella.png)
+
+Some of the issues I found:
 1. The detection accuracy is not great. Bella can be recognized both as a cat and a dog in one frame.
 2. When my cat is detected as both as a dog and as a cat in continuous frames, I will receive multiple messages. Here is a video showing a failure example: https://youtu.be/voapi1MoN7Y
 3. If Bella sits in front of the camera for the entire afternoon, my phone will explode (because the system will keep sending me videos).
